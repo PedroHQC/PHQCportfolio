@@ -21,9 +21,6 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
-*.lcov
-
-# nyc test coverage
 .nyc_output
 
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
@@ -36,7 +33,7 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+build/
 
 # Dependency directories
 node_modules/
@@ -47,6 +44,7 @@ web_modules/
 
 # TypeScript cache
 *.tsbuildinfo
+next-env.d.ts
 
 # Optional npm cache directory
 .npm
@@ -69,7 +67,18 @@ web_modules/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+.pnp/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 .yarn-integrity
 
 # dotenv environment variable files
@@ -78,8 +87,9 @@ web_modules/
 .env.test.local
 .env.production.local
 .env.local
+.env*
 
-# parcel-bundler cache (https://parceljs.org/)
+# Parcel cache
 .cache
 .parcel-cache
 
@@ -93,14 +103,11 @@ dist
 
 # Gatsby files
 .cache/
-# Comment in the public line in if your project uses Gatsby and not Next.js
-# https://nextjs.org/blog/next-9-1#public-directory-support
-# public
 
-# vuepress build output
+# VuePress build output
 .vuepress/dist
 
-# vuepress v2.x temp and cache directory
+# VuePress v2.x temp and cache directory
 .temp
 .cache
 
@@ -122,9 +129,9 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-# yarn v2
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.pnp.*
+# Misc
+.DS_Store
+*.pem
+
+# Vercel
+.vercel
