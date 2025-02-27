@@ -3,6 +3,9 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-pixelify: var(--font-pixelify-sans);
+  --font-sixtyfour: var(--font-sixtyfour);
+  --font-jersey-10: var(--jersey-10);
 }
 
 :root {
@@ -18,7 +21,24 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(to top,#D2D3D7, #D4D5D9, #D6D7D9, #D9D8DD, #DEDFE3,#DCDDDF, #D6D8D7, #CCCCCC);
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+.main-page-class > div{
+  width: 400px;
+  height: 500px;
+}
+
+.main-page-class{
+  align-items: center;
+  height: calc(100vh - var(--spacing)* 18);
+}
+
+.main-page-image-class{
+  background-image: url("../assets/ProImageSmiling.jpg");
+  background-position: -60px 0px;
+  background-size: 600px;
+  background-repeat: no-repeat;
 }
