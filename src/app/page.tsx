@@ -3,24 +3,27 @@
 import { Code, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
 import ProfileImage from "../../public/assets/Astronaut.jpg"
+import ProImage from "../../public/assets/ProImageSmiling.jpg"
 import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
   return (
-    <div className="flex flex-col ">
-      <div className="flex justify-between mt-0 mb-0 h-18 w-full bg-gradient-to-b from-[#D2D3D7] to-[#CCCCCC]">
+    
+    <div className="flex flex-col h-full">
+      <div className="flex justify-between mt-0 mb-0 !h-[7.5%] w-full bg-gradient-to-b from-[#D2D3D7] to-[#CCCCCC]">
         <span className="ml-5 h-[auto] text-3xl text-[#396291] flex items-center gap-4 w-full">
-          <div className="h-16 w-16 border-white border-2 rounded-4xl overflow-hidden">
-            <Image alt="" src={ProfileImage} width={64} height={64} className="relative bottom-2.5"></Image>
+          <div className="h-[89.54%] w-[3.36%] border-white border-2 rounded-[50%] overflow-hidden">
+            <Image alt="" src={ProfileImage} width={0} height={0} className="relative bottom-2.5 !w-[100%]"></Image>
           </div>
-          <span className="w-[calc(100%-64px)] border-b-2">
+          <span className="w-[calc(100%-64px)] border-b-2 text[20%]">
             PEDRO HQC_
           </span>
         </span>
       </div>
-      <div className="flex flex-row gap-[250px] main-page-class ">
-        <div className="main-page-image-class overflow-hidden relative !h-[100%] !w-[510px] ml-[100px]"> </div>
+      <div className="flex flex-row gap-[250px] main-page-class overflow-hidden">
+        {/* <div className="main-page-image-class overflow-hidden relative !h-[100%] !w-[510px] ml-[100px]"> </div> */}
+        <Image alt="" src={ProImage} width={0} height={0} className="max-h-[100%] !w-[31.25%] relative ml-[100px]" ></Image>
         <div className="flex flex-col !h-[400px] !w-[600px] ">
           <span className="text-4xl">Hi! I'm Pedro Coelho</span>
           <span className="text-6xl"><span className="text-8xl font-[family-name:var(--font-jersey-10)]">Game</span> developer</span>

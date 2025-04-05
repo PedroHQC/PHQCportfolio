@@ -14,12 +14,12 @@ export default function Projects() {
                 {/* <button className="mr-40 text-white cursor-pointer w-[150px] hover:bg-[#2c4e75] transition transform active:bg-white">Contact</button> */}
             </div>
             <div className="w-full h-full flex items-center justify-center">
-                <ProjectCard></ProjectCard>
-                <ProjectCard></ProjectCard>
-                <ProjectCard></ProjectCard>
-                <ProjectCard></ProjectCard>
-                <ProjectCard></ProjectCard>
-                <ProjectCard></ProjectCard>
+                <ProjectCard title="Teste" description="Afonse é uma aventura imersiva que coloca você no controle dos Afonsos, os últimos sobreviventes de um mundo pós-apocalíptico abandonado em meio a natureza e concreto." imageUrl="/assets/placeHolder.jpg"></ProjectCard>
+                <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg"></ProjectCard>
+                <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg"></ProjectCard>
+                <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg"></ProjectCard>
+                <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg"></ProjectCard>
+                <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg"></ProjectCard>
                 
 
             </div>
