@@ -33,7 +33,6 @@ body {
 
 .main-page-class{
   align-items: center;
-  height: calc(100vh - var(--spacing)* 18);
 }
 
 .main-page-image-class{
