@@ -52,7 +52,7 @@ export default function Projects() {
                     </div>
 
 
-                    <div className="w-full h-full flex items-center gap-6 p-10 overflow-auto scroll-smooth snap-x snap-mandatory" ref={containerRef}>
+                    <div className="w-full h-full flex items-center gap-6 p-10 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory" ref={containerRef}>
                         <ProjectCard title="Afonse" description="Afonse is an immersive adventure that puts you in control of the Afonsos — the last survivors of a post-apocalyptic world abandoned amidst nature and concrete." imageUrl="/assets/AfonseMain.png" cardImageUrl="/assets/AfonseFalling.png" />
                         {/* <ProjectCard title="Afonse" description="The first boss AI was built using a state machine to manage movement, detection, and attacks on Afonse. This design allowed easy improvements to the boss's behavior, including animation control and damage timing." imageUrl="/assets/AfonseMushBoss.png" cardImageUrl="/assets/AfonseVsBoss.png" />
                         <ProjectCard title="Afonse" description="I developed a simple AI using a state machine for the spiders, enabling random and threatening behaviors. Raycasts were used to detect viable locations for movement. Additionally, I implemented an Inverse Kinematics (IK) system for the spider animations, automatically adjusting leg positions for more realistic movements." imageUrl="/assets/AfonseAranha.png" cardImageUrl="/assets/AfonseSpiderEnemies.png" /> */}
