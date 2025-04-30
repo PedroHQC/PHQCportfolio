@@ -4,6 +4,7 @@ import { getScaleFactor } from '../../../public/utils/utils';
 import ProjectCard from "./components/project-card";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useRouter } from 'next/navigation';
+import { DialogData } from './utilsClasses';
 
 
 export default function Projects() {
@@ -11,7 +12,10 @@ export default function Projects() {
     const containerRef = useRef(null);
     const cardWidth = 500;
     const gap = 24;
-
+    let dialogData = [
+        new DialogData("/assets/AfonseGarden.png", "/assets/AfonseAranha.png", "/assets/AfonseAranha.png", "/videos/afonseSpider.mp4"),
+        new DialogData("/assets/AfonseGarden.png", "/assets/AfonseAranha.png", "/assets/AfonseAranha.png", "/videos/afonseBoss.mp4"),
+    ]
     const [scale, setScale] = useState(1); // Você pode ajustar esse valor dinamicamente
     useEffect(() => {
         const updateScale = () => setScale(getScaleFactor());
@@ -53,17 +57,17 @@ export default function Projects() {
 
 
                     <div className="w-full h-full flex items-center gap-6 p-10 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory" ref={containerRef}>
-                        <ProjectCard title="Afonse" description="Afonse is an immersive adventure that puts you in control of the Afonsos — the last survivors of a post-apocalyptic world abandoned amidst nature and concrete." imageUrl="/assets/AfonseMain.png" cardImageUrl="/assets/AfonseFalling.png" />
+                        <ProjectCard title="Afonse" description="Afonse is an immersive adventure that puts you in control of the Afonsos — the last survivors of a post-apocalyptic world abandoned amidst nature and concrete." imageUrl="/assets/AfonseMain.png" cardImageUrl="/assets/AfonseFalling.png" dialogData={dialogData} />
                         {/* <ProjectCard title="Afonse" description="The first boss AI was built using a state machine to manage movement, detection, and attacks on Afonse. This design allowed easy improvements to the boss's behavior, including animation control and damage timing." imageUrl="/assets/AfonseMushBoss.png" cardImageUrl="/assets/AfonseVsBoss.png" />
                         <ProjectCard title="Afonse" description="I developed a simple AI using a state machine for the spiders, enabling random and threatening behaviors. Raycasts were used to detect viable locations for movement. Additionally, I implemented an Inverse Kinematics (IK) system for the spider animations, automatically adjusting leg positions for more realistic movements." imageUrl="/assets/AfonseAranha.png" cardImageUrl="/assets/AfonseSpiderEnemies.png" /> */}
-                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" />
-                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" />
-                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" />
-                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" />
-                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" />
-                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" />
-                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" />
-                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" />
+                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" dialogData={dialogData} />
+                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" dialogData={dialogData} />
+                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" dialogData={dialogData} />
+                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" dialogData={dialogData} />
+                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" dialogData={dialogData} />
+                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" dialogData={dialogData} />
+                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" dialogData={dialogData} />
+                        <ProjectCard title="Teste" description="teste" imageUrl="/assets/placeHolder.jpg" cardImageUrl="/assets/AfonseVsBoss.png" dialogData={dialogData} />
                     </div>
                     <button
                         onClick={() => scroll('left')}
