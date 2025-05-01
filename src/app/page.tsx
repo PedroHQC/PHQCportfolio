@@ -48,7 +48,7 @@ export default function Home() {
           <div className="flex flex-row gap-[250px] overflow-hidden h-full items-center">
             <Image alt="" src={ProImage} width={0} height={0} className="max-h-full !w-[31.25%] relative ml-[100px]" />
             <div className="flex flex-col !h-[400px] !w-[600px] font-[family-name:var(--font-geist-mono)]">
-              <span className="text-4xl">Hi! I'm Pedro Coelho</span>
+              <span className="text-4xl">Hi! I&apos;m Pedro Coelho</span>
               <span className="text-6xl">
                 <span className="text-8xl font-[family-name:var(--font-jersey-10)]">Game</span> developer
               </span>

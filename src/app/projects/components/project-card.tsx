@@ -4,7 +4,6 @@ import { tv } from "tailwind-variants";
 import { useState } from 'react';
 import Dialog from './dialog';
 import Image from "next/image";
-import ProfileImage from "../../../../public/assets/Astronaut.jpg"
 import { DialogData } from '../utilsClasses';
 
 
@@ -49,7 +48,7 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
       <div className="relative z-10 flex flex-col h-full">
         <div className={descriptionArea()}>
           <span className={`${descriptionImageContainer()} ${borderGradient()}`}>
-            <img className={`${descriptionImage()}`} src={cardImageUrl} alt="" />
+            <Image className={`${descriptionImage()}`} src={cardImageUrl} alt="" width={1920} height={1080}/>
           </span>
 
           <SimpleBar className="max-h-[350px] mt-[72px]">
