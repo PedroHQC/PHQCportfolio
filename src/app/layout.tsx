@@ -31,9 +31,7 @@ const jersey10 = Jersey_10({
 export const metadata: Metadata = {
   title: "PedroHQC_",
   description: "Professional Portfolio by PedroHQC",
-  icons: {
-    icon: "/favicon.ico", // Caminho relativo à pasta /public
-  },
+
 };
 
 export default function RootLayout({
