@@ -21,13 +21,13 @@ export default function Projects() {
     ]
 
     const botVinnikDialogData = [
-        new DialogData("./assets/BotVinnikOverview.png", "./assets/BotVinnikTeaching.png", "./assets/BotVinnikBoard.png", "./videos/BotVinnikShowCase.mp4",
+        new DialogData("./assets/BotVinnikOverview.png", "./assets/BotVinnikTeaching.png", "./assets/BotVinnikBoard.png", "./videos/BotVinnikShowCase.MP4",
             "In collaboration with DeepGreen Studios, I contributed to the development of BotVinnik Chess Masteries Academy, an educational chess platform focused on advanced mastery techniques.",
             "I was responsible for implementing scene communication and smooth transitions, ensuring a cohesive and responsive flow between them I also designed a save system to track and restore user progress.",
             "I also refined gameplay by integrating animations that improved visual feedback and level clarity. Unity coroutines were used to handle asynchronous tasks, enhancing both performance and user experience."),
     ]
     const wonderWallaceDialogData = [
-        new DialogData("./assets/WonderWallaceOverview.png", "./assets/WonderWallaceFood.png", "./assets/WonderWallaceFishing.png", "./videos/WonderWallaceShowCase.mp4",
+        new DialogData("./assets/WonderWallaceOverview.png", "./assets/WonderWallaceFood.png", "./assets/WonderWallaceFishing.png", "./videos/WonderWallaceShowCase.MP4",
             "In this project the game mechanics are simple yet engaging, with Wallace racing against the clock to reel in the fish, offering a fun and challenging experience.",
             "I developed the fishing mechanics for the game, from the throw to the catch, incorporating a timer that challenges the player to catch fish that are randomly selected.",
             "Additionally, I implemented a camera transition system using Cinemachine, creating cinematic moments throughout the game. "
