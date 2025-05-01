@@ -19,6 +19,9 @@ export default function Home() {
     window.addEventListener('resize', updateScale);
     return () => window.removeEventListener('resize', updateScale);
   }, []);
+  const handleButtonClick = () => {
+    window.open('https://www.linkedin.com/in/pedro-henrique-queiroz-50301b221/', '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="relative w-full h-full overflow-hidden">
@@ -58,7 +61,7 @@ export default function Home() {
                 <button onClick={() => router.push("projects")} className="transform active:scale-90 flex items-center justify-center gap-3 w-60 px-4 py-2 bg-[#396291] text-white rounded-lg hover:bg-[#2c4e75] transition cursor-pointer">
                   Projects <Code className=" text-gray-200" />
                 </button>
-                <button className="transform active:scale-90 flex items-center justify-center gap-3 w-60 px-4 py-2 border-4 border-[#396291] text-[#396291] rounded-lg hover:border-[#2c4e75] hover:bg-[#2c4e75] hover:text-white transition cursor-pointer">
+                <button className="transform active:scale-90 flex items-center justify-center gap-3 w-60 px-4 py-2 border-4 border-[#396291] text-[#396291] rounded-lg hover:border-[#2c4e75] hover:bg-[#2c4e75] hover:text-white transition cursor-pointer" onClick={() => handleButtonClick()}>
                   Hire-me <SquareArrowOutUpRight />
                 </button>
               </div>
