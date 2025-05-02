@@ -58,7 +58,7 @@ export default function Projects() {
                                 <FiChevronLeft className="xl:w-12 xl:h-12    h-[155px] w-[155px] text-[#396291]" />
                             </div>
                             <span className="w-[calc(100%-64px)] border-b-8 text-7xl xl:text-3xl xl:border-b-2 font-[family-name:var(--font-geist-mono)]">
-                                HOME
+                                PROJECTS
                             </span>
                         </span>
                     </div>
