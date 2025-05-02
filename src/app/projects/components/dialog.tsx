@@ -24,7 +24,7 @@ export default function Dialog({ isOpen, onClose, children, bgImage }: DialogPro
           
           <button
             onClick={onClose}
-            className="absolute top-2 right-2 m-6 text-gray-500 hover:text-gray-700 z-1000 hover:cursor-pointer"
+            className="absolute top-2 right-2 m-6 xl:text-lg text-9xl text-gray-500 hover:text-gray-700 z-1000 hover:cursor-pointer"
           >
             ✖
           </button>
