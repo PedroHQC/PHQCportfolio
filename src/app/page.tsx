@@ -59,7 +59,7 @@ export default function Home() {
               design patterns to create efficient, scalable, and maintainable code. Adept at
               identifying and delivering practical solutions to enhance project outcomes and
               optimize workflows.
-              <div className="flex xl:gap-20 gap-0 xl:justify-center justify-between xl:mt-10 mt-auto xl:h-auto h-[150px]">
+              <div className="flex xl:gap-20 gap-0 xl:justify-center justify-between xl:mt-10 mt-10 xl:h-auto h-[150px]">
                 <button onClick={() => router.push("projects")} className="transform active:scale-90 flex items-center justify-center xl:gap-3 gap-8 xl:w-60 w-[650px] px-4 py-2 bg-[#396291] text-white xl:rounded-lg rounded-[24px] hover:bg-[#2c4e75] transition cursor-pointer xl:text-xl text-5xl">
                   Projects <Code className=" text-gray-200 xl:w-[22px] xl:h-[22px] h-[70px] w-[80px]" />
                 </button>
