@@ -13,14 +13,14 @@ export default function Projects() {
     const cardWidth = 500;
     const gap = 24;
     const afonseDialogData = [
-        new DialogData("./assets/AfonseLab.png", "./assets/AfonseScreenJump.png", "./assets/Afonse.png", "/videos/AfonseStatesShowcase.mp4",
+        new DialogData("./assets/AfonseLab.png", "./assets/AfonseScreenJump.png", "./assets/Afonse.png", "./videos/AfonseStatesShowcase.mp4",
             "In this project I developed a state machine system to manage character and enemy behaviors, enabling smooth transitions between actions like movement, jumping, and attacking.", "For the player, the system ensured responsive gameplay, while for enemies, it allowed random, threatening actions with raycast-based navigation for more dynamic movement.",
             "The same system was applied to control the first boss, organizing its attack patterns in a way that made it both challenging and predictable, enhancing the overall gameplay experience."
             , "Afonse"
         ),
         new DialogData("./assets/AfonseWalkingDebug.png", "./assets/AfonseJumpDebug.png", "./assets/AfonseCrouchDebug.png", "./videos/AfonseGlideShowCase.MP4",
             "Using a state machine, Afonse (aka the player) can freely switch between states, altering the behavior based on each one.",
-            "This system has three main components: the PlayerBrain, which initializes the state machine; the StateMachine class, which is responsible for setting up the states; and the individual States, which contain their own behavior within themselves. For example, a 'GlideState' could manage player input and physics, making the player move differently while in the air.",
+            "This system has three main components: the PlayerBrain, which initializes the state machine; the StateMachine class, which is responsible for setting up the states; and the individual States, which contain their own behavior within themselves. For example, a GlideState can handle input and physics to change how the player moves in the air.",
             "State switching can occur in two ways. The first and most common happens through in-state conditions that trigger transitions. The second involves exceptions that can force a state change at any time, as long as their conditions are met."
             , "State-Machine"
         ),

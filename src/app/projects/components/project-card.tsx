@@ -63,7 +63,7 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
               <span className='xl:inline relative xl:w-[33%] w-[90%] h-full flex xl:ml-[8%]'>
                 <span className='w-[100%] absolute top-0 xl:bottom-[0] bottom-[-100%] bg-black/40 flex flex-col gap-4	z-[-1]'>
                   <span className={dialogTitleClass()}>{item.titleText}</span>
-                  <span className=' font-[family-name:var(--font-geist-mono)] xl:text-[22px] text-[66px] text-white px-[22px] text-justify'>
+                  <span className=' font-[family-name:var(--font-geist-mono)] xl:text-[20px] text-[66px] text-white px-[22px] text-justify'>
                     <div className='indent-[30px] '>{item.firstText}</div>
                     <br/>
                     <div className='indent-[30px]'>{item.secondText}</div>
