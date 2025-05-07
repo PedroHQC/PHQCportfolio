@@ -13,22 +13,32 @@ export default function Projects() {
     const cardWidth = 500;
     const gap = 24;
     const afonseDialogData = [
-        new DialogData("./assets/AfonseLab.png", "./assets/AfonseScreenJump.png", "./assets/Afonse.png", "./videos/AfonseStatesShowcase.mp4",
+        new DialogData("./assets/AfonseLab.png", "./assets/AfonseScreenJump.png", "./assets/Afonse.png", "/videos/AfonseStatesShowcase.mp4",
             "In this project I developed a state machine system to manage character and enemy behaviors, enabling smooth transitions between actions like movement, jumping, and attacking.", "For the player, the system ensured responsive gameplay, while for enemies, it allowed random, threatening actions with raycast-based navigation for more dynamic movement.",
             "The same system was applied to control the first boss, organizing its attack patterns in a way that made it both challenging and predictable, enhancing the overall gameplay experience."
+            , "Afonse"
+        ),
+        new DialogData("./assets/AfonseWalkingDebug.png", "./assets/AfonseJumpDebug.png", "./assets/AfonseCrouchDebug.png", "/videos/AfonseGlideShowCase.MP4",
+            "Using a state machine, Afonse (aka the player) can freely switch between states, altering the behavior based on each one.",
+            "This system has three main components: the PlayerBrain, which initializes the state machine; the StateMachine class, which is responsible for setting up the states; and the individual States, which contain their own behavior within themselves. For example, a 'GlideState' could manage player input and physics, making the player move differently while in the air.",
+            "State switching can occur in two ways. The first and most common happens through in-state conditions that trigger transitions. The second involves exceptions that can force a state change at any time, as long as their conditions are met."
+            , "State-Machine"
         ),
     ]
     const botVinnikDialogData = [
-        new DialogData("./assets/BotVinnikOverview.png", "./assets/BotVinnikTeaching.png", "./assets/BotVinnikBoard.png", "./videos/BotVinnikShowCase.MP4",
+        new DialogData("./assets/BotVinnikOverview.png", "./assets/BotVinnikTeaching.png", "./assets/BotVinnikBoard.png", "/videos/BotVinnikShowCase.MP4",
             "In collaboration with DeepGreen Studios, I contributed to the development of BotVinnik Chess Masteries Academy, an educational chess platform focused on advanced mastery techniques.",
             "I was responsible for implementing scene communication and smooth transitions, ensuring a cohesive and responsive flow between them I also designed a save system to track and restore user progress.",
-            "I also refined gameplay by integrating animations that improved visual feedback and level clarity. Unity coroutines were used to handle asynchronous tasks, enhancing both performance and user experience."),
+            "I also refined gameplay by integrating animations that improved visual feedback and level clarity. Unity coroutines were used to handle asynchronous tasks, enhancing both performance and user experience.",
+            "Bot Vinnik"
+        ),
     ]
     const wonderWallaceDialogData = [
-        new DialogData("./assets/WonderWallaceOverview.png", "./assets/WonderWallaceFood.png", "./assets/WonderWallaceFishing.png", "./videos/WonderWallaceShowCase.MP4",
+        new DialogData("./assets/WonderWallaceOverview.png", "./assets/WonderWallaceFood.png", "./assets/WonderWallaceFishing.png", "/videos/WonderWallaceShowCase.MP4",
             "In this project the game mechanics are simple yet engaging, with Wallace racing against the clock to reel in the fish, offering a fun and challenging experience.",
             "I developed the fishing mechanics for the game, from the throw to the catch, incorporating a timer that challenges the player to catch fish that are randomly selected.",
-            "Additionally, I implemented a camera transition system using Cinemachine, creating cinematic moments throughout the game. "
+            "Additionally, I implemented a camera transition system using Cinemachine, creating cinematic moments throughout the game. ",
+            "Wonder Wallace"
         ),
     ]
     const [scale, setScale] = useState(1); // Você pode ajustar esse valor dinamicamente

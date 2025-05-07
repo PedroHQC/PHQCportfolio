@@ -61,8 +61,8 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
           {dialogData.map((item, index) => (
             <div key={index} className='flex xl:flex-row flex-col xl:items-start items-center w-full !min-h-full h-full z-10'>
               <span className='xl:inline relative xl:w-[33%] w-[90%] h-full flex xl:ml-[8%]'>
-                <span className='w-[100%] absolute top-0 bottom-[-100%] bg-black/40 flex flex-col gap-4	z-[-1]'>
-                  <span className={dialogTitleClass()}>{title}</span>
+                <span className='w-[100%] absolute top-0 xl:bottom-[0] bottom-[-100%] bg-black/40 flex flex-col gap-4	z-[-1]'>
+                  <span className={dialogTitleClass()}>{item.titleText}</span>
                   <span className=' font-[family-name:var(--font-geist-mono)] xl:text-[22px] text-[66px] text-white px-[22px] text-justify'>
                     <div className='indent-[30px] '>{item.firstText}</div>
                     <br/>
@@ -73,12 +73,12 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
                 </span>
               </span>
               <span className='flex flex-col gap-4 xl:w-[67%] w-full h-full justify-center items-center'>
-                <span className='grid xl:grid-cols-[615px_288px] grid-cols-[984px_461px] gap-4 xl:h-[345px] h-[552] overflow-hidden'>
+                <span className='grid xl:grid-cols-[615px_288px] grid-cols-[984px_461px] rounded-md gap-4 xl:h-[345px] h-[552] overflow-hidden'>
                   <Image  alt="" src={item.mainImage} width={1920} height={1080} className="relative rounded-md shadow-lg  xl:!h-[345px] !h-[552] object-cover" />
-                  <Image alt="" src={item.upperMinorImage} width={1920} height={1080} className="relative rounded-md shadow-lg bottom-2.5 !w-[full]" />
+                  <Image alt="" src={item.upperMinorImage} width={1920} height={1080} className="relative rounded-md shadow-lg  !w-full" />
                 </span>
-                <span className='grid xl:grid-cols-[288px_615px] grid-cols-[461px_984px] gap-4 xl:h-[345px] h-[552] overflow-hidden'>
-                  <Image alt="" src={item.bottomMinorImage} width={1920} height={1080} className="relative rounded-md shadow-lg bottom-2.5 !w-full " />
+                <span className='grid xl:grid-cols-[288px_615px] grid-cols-[461px_984px] rounded-md gap-4 xl:h-[345px] h-[552] overflow-hidden'>
+                  <Image alt="" src={item.bottomMinorImage} width={1920} height={1080} className="relative rounded-md shadow-lg !w-full " />
                   <video src={item.videoSrc}
                     autoPlay
                     loop
