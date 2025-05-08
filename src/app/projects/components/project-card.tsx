@@ -60,7 +60,7 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
         <div className="flex flex-col w-full h-full overflow-y-scroll overflow-x-hidden " >
           {dialogData.map((item, index) => (
             <div key={index} className='flex xl:flex-row flex-col xl:items-start items-center w-full !min-h-full h-full z-10'>
-              <span className='xl:inline relative xl:w-[33%] w-[90%] h-[calc(100%-1300px)] flex xl:ml-[8%]'>
+              <span className='xl:inline relative xl:w-[33%] w-[90%] xl:h-full h-[calc(100%-1300px)] flex xl:ml-[8%]'>
                 <span className='w-[100%] absolute top-0 xl:bottom-[0] bottom-[-1300px] bg-black/40 flex flex-col gap-4	z-[-1]'>
                   <span className={dialogTitleClass()}>{item.titleText}</span>
                   <span className=' font-[family-name:var(--font-geist-mono)] xl:text-[20px] text-[66px] text-white px-[22px] text-justify'>
@@ -72,7 +72,7 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
                   </span>
                 </span>
               </span>
-              <span className='flex flex-col gap-4 xl:w-[67%] w-full h-[1120px] justify-center items-center'>
+              <span className='flex flex-col gap-4 xl:w-[67%] w-full xl:h-full h-[1120px] justify-center items-center'>
                 <span className='grid xl:grid-cols-[615px_288px] grid-cols-[984px_461px] rounded-md gap-4 xl:h-[345px] h-[552] overflow-hidden'>
                   <Image  alt="" src={item.mainImage} width={1920} height={1080} className="relative rounded-md shadow-lg  xl:!h-[345px] !h-[552] object-cover" />
                   <Image alt="" src={item.upperMinorImage} width={1920} height={1080} className="relative rounded-md shadow-lg  !w-full" />
