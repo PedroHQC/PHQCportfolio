@@ -12,7 +12,7 @@ export default function Dialog({ isOpen, onClose, children, bgImage }: DialogPro
     if (!isOpen) return null;
   
     return (
-      <div className="fixed inset-0 bg-black/40 bg-opacity-50 flex justify-center items-center z-50 cursor-auto" onClick={onClose}>
+      <div className="fixed inset-0 bg-black/70 bg-opacity-50 flex justify-center items-center z-50 cursor-auto backdrop-blur-[20px]" onClick={onClose}>
         
         
         <div 
