@@ -1,5 +1,6 @@
 "use client";
 import { ReactNode } from "react";
+import { FiX } from "react-icons/fi";
 
 interface DialogProps {
   isOpen: boolean;
@@ -24,9 +25,9 @@ export default function Dialog({ isOpen, onClose, children, bgImage }: DialogPro
           
           <button
             onClick={onClose}
-            className="absolute top-2 right-2 m-6 xl:text-lg text-9xl text-gray-500 hover:text-gray-700 z-1000 hover:cursor-pointer"
+            className="absolute -top-2 -right-20 m-6 xl:text-lg text-9xl text-white hover:text-gray-700 z-1000 hover:cursor-pointer"
           >
-            ✖
+            <FiX className="h-6 w-6" />
           </button>
           {children}
         </div>

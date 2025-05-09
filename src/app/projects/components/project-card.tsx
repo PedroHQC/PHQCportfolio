@@ -1,10 +1,11 @@
 import 'simplebar-react/dist/simplebar.min.css';
 import SimpleBar from 'simplebar-react';
 import { tv } from "tailwind-variants";
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Dialog from './dialog';
 import Image from "next/image";
 import { DialogData } from '../utilsClasses';
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
 
 export const teste = tv({
@@ -43,12 +44,25 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ title, description, imageUrl, cardImageUrl, dialogData }: ProjectCardProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const containerRef = useRef(null);
+  const cardHeight = 881;
+  const gap = 0;
+  const scroll = (direction: string) => {
+    if (containerRef.current) {
+      //@ts-expect-error null inexistent
+      containerRef.current.scrollBy({
+        top: direction === 'down' ? cardHeight + gap : -(cardHeight + gap),
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className={`${card()} ${cardBlur()}`} style={{ backgroundImage: `url(${imageUrl})` }} onClick={() => { setIsDialogOpen(true); }}>
       <div className="relative z-10 flex flex-col h-full">
         <div className={descriptionArea()}>
           <span className={`${descriptionImageContainer()} ${borderGradient()}`}>
-            <Image className={`${descriptionImage()}`} src={cardImageUrl} alt="" width={1920} height={1080}/>
+            <Image className={`${descriptionImage()}`} src={cardImageUrl} alt="" width={1920} height={1080} />
           </span>
           <SimpleBar className="max-h-[350px] mt-[72px]">
             <p className={descriptionClass()}>{description}</p>
@@ -57,24 +71,34 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
         </div>
       </div>
       <Dialog isOpen={isDialogOpen} onClose={() => { setIsDialogOpen(false) }} bgImage={imageUrl}>
-        <div className="flex flex-col w-full h-full overflow-y-scroll overflow-x-hidden " >
+        <div className="flex flex-col w-full h-full overflow-y-scroll overflow-x-hidden" ref={containerRef} >
+          {dialogData.length > 1 && (
+            <div className='z-[101]'>
+              <button onClick={() => scroll('up')} className="xl:flex hidden absolute right-5 top-15 -translate-y-1/2 bg-white/10 text-white rounded-full w-15 h-15 items-center justify-center hover:bg-white/40 transition-all duration-300">
+                <FiChevronUp className="h-6 w-6" />
+              </button>
+              <button onClick={() => scroll('down')} className="xl:flex hidden absolute right-5 -bottom-1 -translate-y-1/2 bg-white/10 text-white rounded-full w-15 h-15 items-center justify-center hover:bg-white/40 transition-all duration-300">
+                <FiChevronDown className="h-6 w-6" />
+              </button>
+            </div>
+          )}
           {dialogData.map((item, index) => (
             <div key={index} className='flex xl:flex-row flex-col xl:items-start items-center w-full !min-h-full h-full z-10'>
-              <span className='xl:inline relative xl:w-[33%] w-[90%] xl:h-full h-[calc(100%-1300px)] flex xl:ml-[8%]'>
+              <span className='xl:inline relative xl:w-[33%] w-[90%] xl:h-full h-[calc(100%-1300px)] flex xl:ml-[4%]'>
                 <span className='w-[100%] absolute top-0 xl:bottom-[0] bottom-[-1300px] bg-black/40 flex flex-col gap-4	z-[-1]'>
                   <span className={dialogTitleClass()}>{item.titleText}</span>
                   <span className=' font-[family-name:var(--font-geist-mono)] xl:text-[20px] text-[66px] text-white px-[22px] text-justify'>
                     <div className='indent-[30px] '>{item.firstText}</div>
-                    <br/>
+                    <br />
                     <div className='indent-[30px]'>{item.secondText}</div>
-                    <br/>
+                    <br />
                     <div className='indent-[30px]'>{item.thirdText}</div>
                   </span>
                 </span>
               </span>
               <span className='flex flex-col gap-4 xl:w-[67%] w-full xl:h-full h-[1120px] justify-center items-center'>
                 <span className='grid xl:grid-cols-[615px_288px] grid-cols-[984px_461px] rounded-md gap-4 xl:h-[345px] h-[552] overflow-hidden'>
-                  <Image  alt="" src={item.mainImage} width={1920} height={1080} className="relative rounded-md shadow-lg  xl:!h-[345px] !h-[552] object-cover" />
+                  <Image alt="" src={item.mainImage} width={1920} height={1080} className="relative rounded-md shadow-lg  xl:!h-[345px] !h-[552] object-cover" />
                   <Image alt="" src={item.upperMinorImage} width={1920} height={1080} className="relative rounded-md shadow-lg  !w-full" />
                 </span>
                 <span className='grid xl:grid-cols-[288px_615px] grid-cols-[461px_984px] rounded-md gap-4 xl:h-[345px] h-[552] overflow-hidden'>
@@ -90,6 +114,7 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
             </div>
           ))}
 
+          
 
 
         </div>

@@ -24,7 +24,7 @@ export default function Projects() {
             "State switching can occur in two ways. The first and most common happens through in-state conditions that trigger transitions. The second involves exceptions that can force a state change at any time, as long as their conditions are met."
             , "State-Machine"
         ),
-         new DialogData("./assets/AfonseBossAtack.png", "./assets/AfonseAndBoss.png", "./assets/AfonseBoss.png", "./videos/AfonseBossShowcase.MP4",
+        new DialogData("./assets/AfonseBossAtack.png", "./assets/AfonseAndBoss.png", "./assets/AfonseBoss.png", "./videos/AfonseBossShowcase.MP4",
             "The boss has its own state machine and will switch between states, with each state representing an action. Once an action is completed, the boss transitions to another state, thus performing a different action.",
             "Unlike the player, the boss's state machine doesn't wait for input to change states. Instead, it performs its idle behavior and reacts dynamically to the player's movements.",
             "This makes the boss feel alive, as if it has its own mind, and allows the player to analyze its behavior to discover the best strategy for defeating it."
@@ -84,14 +84,17 @@ export default function Projects() {
                         <ProjectCard title="Wonder Wallace" description="Wonder Wallace is a fast-paced fishing game where you play as Wallace, a bear on a mission to catch lunch. Tasked with reeling in three delicious fish, Wallace must race against the clock to complete his goal." imageUrl="./assets/WonderWallaceCard.png" cardImageUrl="./assets/WonderWallaceKitchen.png" dialogData={wonderWallaceDialogData} />
                         {/* <ProjectCard title="Teste" description="teste" imageUrl="./assets/placeHolder.jpg" cardImageUrl="./assets/AfonseVsBoss.png" dialogData={afonseDialogData} /> */}
                     </div>
-                    {/* <button
-                        onClick={() => scroll('left')}
-                        className="xl:flex hidden absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 items-center justify-center hover:bg-black/70 z-[100]"><FiChevronLeft />
-                    </button>
-                    <button
-                        onClick={() => scroll('right')}
-                        className="xl:flex hidden absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 items-center justify-center hover:bg-black/70 z-[100]"><FiChevronRight />
-                    </button> */}
+                    <div className='hidden'>
+
+                        <button
+                            onClick={() => scroll('left')}
+                            className="xl:flex hidden absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 items-center justify-center hover:bg-black/70 z-[100]"><FiChevronLeft />
+                        </button>
+                        <button
+                            onClick={() => scroll('right')}
+                            className="xl:flex hidden absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 items-center justify-center hover:bg-black/70 z-[100]"><FiChevronRight />
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
