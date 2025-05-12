@@ -30,6 +30,12 @@ export default function Projects() {
             "This makes the boss feel alive, as if it has its own mind, and allows the player to analyze its behavior to discover the best strategy for defeating it."
             , "Boss"
         ),
+        new DialogData("./assets/SpiderEnemyChekingSurroundings.png", "./assets/AfonseAranha.png", "./assets/SpideEnemy.png", "./videos/SpiderEnemyShowcase.MP4",
+            "These enemies are frightening spiders that jump around unpredictably, with the sole intention of disturbing the player (Afonse). Their erratic movements create a constant sense of imminent danger.",
+            "Their AI uses a state machine that determines the spider's next move by analyzing the environment using Raycasts — looking for possible jump locations or detecting proximity to walls. Based on this analysis, the spider decides whether to jump or simply walk in the chosen direction.",
+            "The spiders' state machine is simple, with only three main states — Idle, Move, and Jump — yet it effectively makes them feel alive and presents a constant threat to the player."
+            , "Spider-Enemy"
+        ),
     ]
     const botVinnikDialogData = [
         new DialogData("./assets/BotVinnikOverview.png", "./assets/BotVinnikTeaching.png", "./assets/BotVinnikBoard.png", "./videos/BotVinnikShowCase.MP4",
