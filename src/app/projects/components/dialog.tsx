@@ -25,9 +25,9 @@ export default function Dialog({ isOpen, onClose, children, bgImage }: DialogPro
           
           <button
             onClick={onClose}
-            className="absolute -top-2 -right-20 m-6 xl:text-lg text-9xl text-white hover:text-gray-700 z-1000 hover:cursor-pointer"
+            className="absolute xl:-top-2 top-2 right-0 xl:-right-20 m-6 xl:text-lg text-9xl text-white hover:text-gray-700 z-1000 hover:cursor-pointer"
           >
-            <FiX className="h-6 w-6" />
+            <FiX className=" xl:h-6 xl:w-6 h-20 w-20" />
           </button>
           {children}
         </div>

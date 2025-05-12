@@ -80,6 +80,9 @@ export default function ProjectCard({ title, description, imageUrl, cardImageUrl
               <button onClick={() => scroll('down')} className="xl:flex hidden absolute right-5 -bottom-1 -translate-y-1/2 bg-white/10 text-white rounded-full w-15 h-15 items-center justify-center hover:bg-white/40 transition-all duration-300">
                 <FiChevronDown className="h-6 w-6" />
               </button>
+              <button onClick={() => scroll('down')} className="animate-bounce xl:hidden flex absolute right-[45%] -bottom-10 -translate-y-1/2 bg-white/10 text-white rounded-full w-[200px] h-[200px] items-center justify-center hover:bg-white/40 transition-all duration-300">
+                <FiChevronDown className="h-20 w-20" />
+              </button>
             </div>
           )}
           {dialogData.map((item, index) => (
