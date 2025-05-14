@@ -44,6 +44,12 @@ export default function Projects() {
             "I also refined gameplay by integrating animations that improved visual feedback and level clarity. Unity coroutines were used to handle asynchronous tasks, enhancing both performance and user experience.",
             "Bot Vinnik"
         ),
+        new DialogData("./assets/BotVinnikLaikaTip.png", "./assets/BotVinnikChessTrail.png", "./assets/BotVinnikChessHighlights.png", "./videos/BotVinnikLaikaHint.MP4",
+            "A big part of the game goes to its visuals, many of them was made using tweens to make sure that everything was in place, syncronized and working in order.",
+            "For the pieces movement to the correct move particles the tweens helped organize and smooth this interactions. Laika the dog also come into place by using tweens to move and syncronize the tips to her barking sounds.",
+            "Even for a chess game all of that brings a more professional finish and a smooth experience",
+            "Smooth Transitions"
+        ),
     ]
     const wonderWallaceDialogData = [
         new DialogData("./assets/WonderWallaceOverview.png", "./assets/WonderWallaceFood.png", "./assets/WonderWallaceFishing.png", "./videos/WonderWallaceShowCase.MP4",
