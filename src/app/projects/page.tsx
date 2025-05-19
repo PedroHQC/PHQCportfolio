@@ -13,24 +13,24 @@ export default function Projects() {
     const cardWidth = 500;
     const gap = 24;
     const afonseDialogData = [
-        new DialogData("./assets/AfonseLab.png", "./assets/AfonseScreenJump.png", "./assets/Afonse.png", "./videos/AfonseShowCase.MP4",
+        new DialogData("./assets/AfonseLab.png", "./assets/AfonseScreenJump.png", "/assets/Afonse.png", "./videos/AfonseShowCase.MP4",
             "In this project I developed a state machine system to manage character and enemy behaviors, enabling smooth transitions between actions like movement, jumping, and attacking.", "For the player, the system ensured responsive gameplay, while for enemies, it allowed random, threatening actions with raycast-based navigation for more dynamic movement.",
             "The same system was applied to control the first boss, organizing its attack patterns in a way that made it both challenging and predictable, enhancing the overall gameplay experience."
             , "Afonse"
         ),
-        new DialogData("./assets/AfonseWalkingDebug.png", "./assets/AfonseJumpDebug.png", "./assets/AfonseCrouchDebug.png", "./videos/AfonseGlideShowCase.MP4",
+        new DialogData("/assets/AfonseWalkingDebug.png", "/assets/AfonseJumpDebug.png", "/assets/AfonseCrouchDebug.png", "./videos/AfonseGlideShowCase.MP4",
             "Using a state machine, Afonse (aka the player) can freely switch between states, altering the behavior based on each one.",
             "This system has three main components: the PlayerBrain, which initializes the state machine; the StateMachine class, which is responsible for setting up the states; and the individual States, which contain their own behavior within themselves. For example, a GlideState can handle input and physics to change how the player moves in the air.",
             "State switching can occur in two ways. The first and most common happens through in-state conditions that trigger transitions. The second involves exceptions that can force a state change at any time, as long as their conditions are met."
             , "State-Machine"
         ),
-        new DialogData("./assets/AfonseBossAtack.png", "./assets/AfonseAndBoss.png", "./assets/AfonseBoss.png", "./videos/AfonseBossShowcase.MP4",
+        new DialogData("/assets/AfonseBossAtack.png", "/assets/AfonseAndBoss.png", "/assets/AfonseBoss.png", "./videos/AfonseBossShowcase.MP4",
             "The boss has its own state machine and will switch between states, with each state representing an action. Once an action is completed, the boss transitions to another state, thus performing a different action.",
             "Unlike the player, the boss's state machine doesn't wait for input to change states. Instead, it performs its idle behavior and reacts dynamically to the player's movements.",
             "This makes the boss feel alive, as if it has its own mind, and allows the player to analyze its behavior to discover the best strategy for defeating it."
             , "Boss"
         ),
-        new DialogData("./assets/SpiderEnemyChekingSurroundings.png", "./assets/AfonseAranha.png", "./assets/SpideEnemy.png", "./videos/SpiderEnemyShowcase.MP4",
+        new DialogData("/assets/SpiderEnemyChekingSurroundings.png", "/assets/AfonseAranha.png", "/assets/SpideEnemy.png", "./videos/SpiderEnemyShowcase.MP4",
             "These enemies are frightening spiders that jump around unpredictably, with the sole intention of disturbing the player (Afonse). Their erratic movements create a constant sense of imminent danger.",
             "Their AI uses a state machine that determines the spider’s next move by analyzing the environment with Raycasts, allowing for precise positioning while remaining performant. It scans for potential jump locations or checks for nearby walls, and based on this analysis, the spider decides whether to jump or simply walk in the chosen direction.",
             "The spiders' state machine is simple, with only three main states — Idle, Move, and Jump — yet it effectively makes them feel alive and presents a constant threat to the player."
@@ -49,6 +49,12 @@ export default function Projects() {
             "For the pieces movement to the correct move particles the tweens helped organize and smooth this interactions. Laika the dog also come into place by using tweens to move and syncronize the tips to her barking sounds.",
             "Even for a chess game all of that brings a more professional finish and a smooth experience",
             "Smooth Transitions"
+        ),
+        new DialogData("./assets/BotVinnikWrongMove.png", "./assets/BotVinnikTeachingText.png", "./assets/BotVinnikCard.png", "./videos/BotVinnikReactions.MP4",
+            "Who is Bot Vinnik? It's a Soviet AI bot that knows everything about chess and will teach you all about it.",
+            "Another big part of the game relies on the way Bot Vinnik interacts with the player. He expresses his emotions and reacts to the player's slowness.",
+            "His key role, however, is to give tips about the moves the player needs to make to proceed to the next lesson. These tips are related to the lesson the player selected, ensuring a playful way to learn.",
+            "Bot Vinnik"
         ),
     ]
     const wonderWallaceDialogData = [
