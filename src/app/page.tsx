@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { getScaleFactor } from '../../public/utils/utils';
 import { Code, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
-import ProfileImage from "../../public/assets/Astronaut.jpg"
+import ProfileImage from "../../public/assets/PLogo.png"
 import ProImage from "../../public/assets/ProImageSmiling.jpg"
 import { useRouter } from "next/navigation";
 
@@ -37,8 +37,8 @@ export default function Home() {
         <div className="flex flex-col h-full w-full">
           <div className="flex justify-between mt-0 mb-0 xl:h-22 h-[250px] w-full bg-gradient-to-b from-[#D2D3D7] to-[#CCCCCC]">
             <span className="ml-5 h-auto text-3xl text-[#396291] flex items-center gap-4 w-full">
-              <div className="xl:h-15 xl:w-15 h-[180px] w-[180px] border-white border-8 xl:border-2 rounded-[50%] overflow-hidden">
-                <Image alt="" src={ProfileImage} width={0} height={0} className="relative bottom-2.5 !w-full" />
+              <div className="xl:h-15 xl:w-15 h-[180px] w-[180px]  border-8 xl:border-2 rounded-[14px] overflow-hidden bg-[#396291]">
+                <Image alt="" src={ProfileImage} width={0} height={0} className="relative my-0.5 mx-auto !w-[85%]" />
               </div>
               <span className="w-[calc(100%-64px)] border-b-8 text-7xl xl:text-3xl xl:border-b-2 font-[family-name:var(--font-geist-mono)]">
                 PEDRO HQC_
