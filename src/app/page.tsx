@@ -4,8 +4,9 @@ import { getScaleFactor } from '../../public/utils/utils';
 import { Code, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
 import ProfileImage from "../../public/assets/PLogo.png"
-import ProImage from "../../public/assets/ProImageSmiling.jpg"
+import ProImage from "../../public/assets/ProImageSmiling.png"
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -35,9 +36,9 @@ export default function Home() {
         }}
       >
         <div className="flex flex-col h-full w-full">
-          <div className="flex justify-between mt-0 mb-0 xl:h-22 h-[250px] w-full bg-gradient-to-b from-[#D2D3D7] to-[#CCCCCC]">
-            <span className="ml-5 h-auto text-3xl text-[#396291] flex items-center gap-4 w-full">
-              <div className="xl:h-15 xl:w-15 h-[180px] w-[180px]  border-8 xl:border-2 rounded-[10px] overflow-hidden bg-[#396291]">
+          <div className="flex justify-between mt-0 mb-0 xl:h-22 h-[250px] w-full bg-[#396291]">
+            <span className="ml-3 h-auto text-3xl text-white flex items-center gap-3 w-full">
+              <div className="xl:h-15 xl:w-15 h-[180px] w-[180px] rounded-[10px] overflow-hidden bg-[#396291]">
                 <Image alt="" src={ProfileImage} width={0} height={0} className="relative my-0.5 mx-auto !w-[85%]" />
               </div>
               <span className="w-[calc(100%-64px)] border-b-8 text-7xl xl:text-3xl xl:border-b-2 font-[family-name:var(--font-geist-mono)]">
@@ -45,7 +46,7 @@ export default function Home() {
               </span>
             </span>
           </div>
-          <div className="flex xl:!flex-row flex-col xl:gap-[250px] h-full overflow-hidden items-center">
+          <div className="flex xl:!flex-row flex-col xl:gap-[250px] h-full overflow-hidden items-center ">
             <div className='h-full xl:max-w-[50%] xl:overflow-auto xl:ml-[100px] overflow-hidden'>
               <Image alt="" src={ProImage} width={0} height={0} className="xl:h-[100%] xl:w-[calc(100%*1.5)] relative" />
             </div>
@@ -59,10 +60,11 @@ export default function Home() {
               design patterns to create efficient, scalable, and maintainable code. Adept at
               identifying and delivering practical solutions to enhance project outcomes and
               optimize workflows.
-              <div className="flex xl:gap-20 gap-0 xl:justify-center justify-between xl:mt-10 mt-[200px] xl:h-auto h-[150px]">
+              <div className="flex xl:gap-20 gap-0 xl:justify-between justify-between xl:mt-10 mt-[200px] xl:h-auto h-[150px]">
                 <button onClick={() => router.push("projects")} className="transform active:scale-90 flex items-center justify-center xl:gap-3 gap-8 xl:w-60 w-[650px] px-4 py-2 bg-[#396291] text-white xl:rounded-lg rounded-[24px] hover:bg-[#2c4e75] transition cursor-pointer xl:text-xl text-5xl">
                   Projects <Code className=" text-gray-200 xl:w-[22px] xl:h-[22px] h-[70px] w-[80px]" />
                 </button>
+                {/* <Link href="/projects">Ir Para Projetos</Link> */}
                 <button className="transform active:scale-90 flex items-center justify-center xl:gap-3 gap-8 xl:w-60 w-[650px] px-4 py-2 xl:border-4 border-8 border-[#396291] text-[#396291] xl:rounded-lg rounded-[24px] hover:border-[#2c4e75] hover:bg-[#2c4e75] hover:text-white transition cursor-pointer xl:text-xl text-5xl font-bold" onClick={() => handleButtonClick()}>
                   Hire-me <SquareArrowOutUpRight className="xl:w-[22px] xl:h-[22px] h-[70px] w-[70px]" />
                 </button>

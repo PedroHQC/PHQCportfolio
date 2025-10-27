@@ -86,10 +86,10 @@ export default function Projects() {
         <div className="relative w-full h-full overflow-hidden">
             <div className="absolute top-0 left-0 origin-top-left" style={{ transform: `scale(${scale})`, width: `${100 / scale}%`, height: `${100 / scale}%` }}>
                 <div className="flex flex-col w-full h-full">
-                    <div className="flex justify-between mt-0 mb-0 xl:h-22 h-[250px] w-full bg-gradient-to-b from-[#D2D3D7] to-[#CCCCCC]">
-                        <span className="ml-5 h-auto text-3xl text-[#396291] flex items-center gap-4 w-full">
-                            <div className="xl:h-15 xl:w-15 h-[180px] w-[180px] border-[#396291] border-8 xl:border-5 rounded-[50%] xl:rounded-4xl overflow-hidden hover:cursor-pointer hover:border-[#497299]" onClick={() => router.back()}>
-                                <FiChevronLeft className="xl:w-12 xl:h-12    h-[155px] w-[155px] text-[#396291]" />
+                    <div className="flex justify-between mt-0 mb-0 xl:h-22 h-[250px] w-full bg-[#396291]">
+                        <span className="ml-3 h-auto text-3xl text-white flex items-center gap-3 w-full">
+                            <div className="xl:h-15 xl:w-15 h-[180px] w-[180px] border-white border-8 xl:border-2 rounded-[50%] xl:rounded-4xl overflow-hidden hover:cursor-pointer hover:border-[#497299]" onClick={() => router.back()}>
+                                <FiChevronLeft className="xl:w-12 xl:h-12 h-[155px] w-[155px] m-auto mt-1 ml-0.5 text-white" />
                             </div>
                             <span className="w-[calc(100%-64px)] border-b-8 text-7xl xl:text-3xl xl:border-b-2 font-[family-name:var(--font-geist-mono)]">
                                 PROJECTS
