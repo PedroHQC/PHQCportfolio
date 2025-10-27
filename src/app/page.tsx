@@ -6,7 +6,6 @@ import Image from "next/image";
 import ProfileImage from "../../public/assets/PLogo.png"
 import ProImage from "../../public/assets/ProImageSmiling.png"
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
