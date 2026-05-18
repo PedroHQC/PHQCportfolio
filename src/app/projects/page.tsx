@@ -65,6 +65,24 @@ export default function Projects() {
             "Wonder Wallace"
         ),
     ]
+    const titeDialogData = [
+      new DialogData("./assets/TiETe/TiETeMain.png", "./assets/TiETe/TiETeCamiaurao.png", "./assets/TiETe/TiETeCatfish.png", "./videos/TiETeVideo.mp4",
+        "Ti & Tê is a fun, fast-paced strategy game with simple yet engaging mechanics. Players guide their unique troops (charming cat-like fish) to gather resources, spawn more units, and ultimately destroy the enemy base.",
+        "The main mechanics of the game envolve using the unity navmesh system to move the units around the map, and a resource gathering system that allows players to spawn more units.",
+        "Additionally, the game features a robust, multi-layered camera system designed to maximize player immersion. It seamlessly supports click-to-move navigation, keyboard controls, smooth zooming, and full 360-degree rotation.", "Ti & Tê") ,
+    ]
+    const duckHuntCrossyRoadDialogData = [
+      new DialogData("./assets/duckHuntCrossyRoad/DuckHuntCrossyRoadMainImage.png", "./assets/duckHuntCrossyRoad/DuckHuntCrossyRoadSecondImage.png", "./assets/duckHuntCrossyRoad/DuckHuntCrossyRoadThirdImage.png", "./videos/DuckHuntCrossyRoadVideoShowcase.mp4",
+        "Duck Hunt Crossy Road is a fun, fast-paced mobile game where you play as a the hunter's dog (that old duck hunter) trying to survive and cross a dangerous forest packed with vengeful ducks out for revenge!",
+        "The main mechanics of the game involve navigating through the level, avoiding obstacles, and collecting items.",
+        "Additionally, the game features a unique, voice-controlled hunting system where players can vocally trigger actions to hunt down occasional passing ducks!", "Duck Hunt Crossy Road") ,
+    ]
+    const boitataDialogData = [
+      new DialogData("./assets/boitata/BoitataMainfirstimage.png", "./assets/boitata/BoitataSecondImage.png", "./assets/boitata/BoitataThirdImage.png", "./videos/BoitataMainVideoShowCase.mp4",
+        "Boitata is a action-adventure tower defense game where you play as the Legendary Boitatá, inspired in the Kingdom series, here you must defend the forest from ruthless woodcutters by summoning powerful units and unleashing the wrath of nature.",
+        "The gameplay features a dynamic day-and-night cycle. By day, players navigate the map to gather resources, recruit new animal towers, and upgrade the sacred main totem. When night falls, ruthless woodcutters invade the forest to tear it down. As Boitatá, you must coordinate with your animal allies, deploying unique tactical abilities to defend the heart of the forest..",
+        "The game was a colaboration with Blueberry Turtle in a GameJam+ event and has wined several awards. Check out the game on Instagram!", "Boitata") ,
+    ]
     const [scale, setScale] = useState(1); // Você pode ajustar esse valor dinamicamente
     useEffect(() => {
         const updateScale = () => setScale(getScaleFactor());
@@ -101,6 +119,10 @@ export default function Projects() {
                         <ProjectCard title="Bot Vinnik" description="From Deep Green Games studio, Engage with BOT.vinnik, a witty Soviet AI chess instructor! His sharp humor and rigorous challenges will mold you into a pro." imageUrl="./assets/BotVinnikCard.png" cardImageUrl="./assets/BotVinnikCardImage.png" dialogData={botVinnikDialogData} />
                         <ProjectCard title="Wonder Wallace" description="Wonder Wallace is a fast-paced fishing game where you play as Wallace, a bear on a mission to catch lunch. Tasked with reeling in three delicious fish, Wallace must race against the clock to complete his goal." imageUrl="./assets/WonderWallaceCard.png" cardImageUrl="./assets/WonderWallaceKitchen.png" dialogData={wonderWallaceDialogData} />
                         {/* <ProjectCard title="Teste" description="teste" imageUrl="../assets/placeHolder.jpg" cardImageUrl="../assets/AfonseVsBoss.png" dialogData={afonseDialogData} /> */}
+                        <ProjectCard title="Ti & Tê" description="Ti & Tê is a 3D strategic defense game where you gather energy to summon powerful units, crush oncoming hordes, and obliterate the enemy." imageUrl="./assets/TiETe/TiETeMainImage.png" cardImageUrl="./assets/TiETe/TiETeCardMainImage.png" dialogData={titeDialogData} />
+                        <ProjectCard title="Duck Hunt Crossy Road" description="Duck Hunt Crossy Road is a fun, fast-paced game where you play as a duck trying to cross a forest full of vengefull ducks." imageUrl="./assets/duckHuntCrossyRoad/DuckHuntCrossyRoadMain.png" cardImageUrl="./assets/duckHuntCrossyRoad/DuckHuntCrossyRoadCard.png" dialogData={duckHuntCrossyRoadDialogData} />
+                        <ProjectCard title="Boitata" description="Boitatá is a thrilling action-adventure game where you embody the legendary fiery serpent of Brazilian folklore. Face off against ruthless woodcutters tearing down your home, and unleash the wrath of nature to defend yourself, rally the wild animals, and save the sacred forest from destruction.." imageUrl="./assets/boitata/BoitataMainImage.png" cardImageUrl="./assets/boitata/BoitataMainImageCard.png" dialogData={boitataDialogData} />
+                    
                     </div>
                     <div className='hidden'>
 
