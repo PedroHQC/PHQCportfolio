@@ -3,8 +3,8 @@ const isProd = process.env.NODE_ENV === "production";
 const nextConfig: NextConfig = {
   /* config options here */
   output: isProd ? "export" : undefined,
-  basePath: isProd ? "/PHQCportfolio" : undefined,
-  assetPrefix: isProd ? "/PHQCportfolio/" : undefined,
+  basePath: isProd ? "" : undefined,
+  assetPrefix: isProd ? "" : undefined,
   images: {
     unoptimized: true,
   },
