@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1400" viewBox="0 0 2400 1400" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="1400" y1="0" x2="1400" y2="1400" gradientUnits="userSpaceOnUse"><stop stop-color="#262626"/><stop offset=".58" stop-color="#6a6a6a"/><stop offset="1" stop-color="#282828"/></linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientTransform="translate(1730 300) rotate(105) scale(1000 1250)" gradientUnits="userSpaceOnUse"><stop stop-color="#b7b7b7" stop-opacity=".42"/><stop offset="1" stop-color="#282828" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ridge" x1="1400" y1="240" x2="1980" y2="1040" gradientUnits="userSpaceOnUse"><stop stop-color="#bcbcbc"/><stop offset=".2" stop-color="#878787"/><stop offset=".65" stop-color="#454545"/><stop offset="1" stop-color="#222222"/></linearGradient>
+    <linearGradient id="shade" x1="1620" y1="200" x2="2220" y2="750" gradientUnits="userSpaceOnUse"><stop stop-color="#242424"/><stop offset=".62" stop-color="#4e4e4e"/><stop offset="1" stop-color="#373737"/></linearGradient>
+    <linearGradient id="foreground" x1="1320" y1="950" x2="1550" y2="1400" gradientUnits="userSpaceOnUse"><stop stop-color="#656565"/><stop offset=".12" stop-color="#3b3b3b"/><stop offset="1" stop-color="#101010"/></linearGradient>
+    <linearGradient id="sweep" x1="1800" y1="870" x2="2100" y2="1400" gradientUnits="userSpaceOnUse"><stop stop-color="#888888"/><stop offset=".18" stop-color="#555555"/><stop offset="1" stop-color="#1a1a1a"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".055"/></feComponentTransfer><feBlend in="SourceGraphic" mode="soft-light"/></filter>
+  </defs>
+  <g filter="url(#grain)">
+    <path fill="url(#sky)" d="M0 0h2400v1400H0z"/>
+    <path fill="url(#light)" d="M0 0h2400v1400H0z"/>
+    <path d="M0 1020C440 1020 620 850 950 760C1300 666 1420 475 1595 300C1660 235 1700 228 1740 238C1608 400 1612 542 1835 689C2030 820 2220 925 2400 968V1400H0Z" fill="url(#ridge)"/>
+    <path d="M1740 238C1673 332 1644 396 1668 475C1710 615 1935 696 2084 796C2190 866 2296 923 2400 968V746C2190 619 1995 544 1900 425C1834 342 1795 258 1740 238Z" fill="url(#shade)"/>
+    <path d="M1740 238C1636 381 1618 506 1835 689C1998 826 2250 930 2400 968" stroke="#bdbdbd" stroke-opacity=".28" stroke-width="2"/>
+    <path d="M0 1170C270 1100 606 1090 944 1028C1360 952 1560 1010 1830 931C2048 867 2220 809 2400 832V1400H0Z" fill="url(#foreground)"/>
+    <path d="M944 1028C1370 937 1560 1010 1830 931C2048 867 2220 809 2400 832" stroke="#adadad" stroke-opacity=".2" stroke-width="2"/>
+    <path d="M1100 1400C1340 1260 1630 1290 1835 1150C2032 1015 2160 969 2400 976V1400Z" fill="url(#sweep)"/>
+  </g>
+</svg>

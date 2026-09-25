@@ -1,14 +1,15 @@
 import type { NextConfig } from "next";
-const isProd = process.env.NODE_ENV === "production";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.NODE_ENV === "production" ? "/PHQCportfolio" : "");
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: isProd ? "export" : undefined,
-  basePath: isProd ? "/PHQCportfolio" : undefined,
-  assetPrefix: isProd ? "" : undefined,
-  images: {
-    unoptimized: true,
+  output: "export",
+  trailingSlash: true,
+  basePath,
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
+  images: { unoptimized: true },
+  // Keep local UI iterations from reusing stale CSS loader output.
+  webpack(config, { dev }) {
+    if (dev) config.cache = false;
+    return config;
   },
-
 };
-
 export default nextConfig;

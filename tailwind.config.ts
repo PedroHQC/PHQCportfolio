@@ -1,3 +1,4 @@
+import scrollbar from 'tailwind-scrollbar';
 module.exports = {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx}', // Caminho para os arquivos do App Router
@@ -22,6 +23,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwind-scrollbar'),
+    scrollbar,
   ],
 };
