@@ -1,0 +1,81 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+import { projects, type Project } from "../data/projects";
+import { asset } from "../lib/site";
+import { ProjectLink } from "./project-navigation";
+import { ProjectGallery } from "./project-gallery";
+
+export function ProjectContent({ project }: { project: Project }) {
+  const next = projects[(projects.indexOf(project) + 1) % projects.length];
+  const [galleryIndex, setGalleryIndex] = useState<number | null>(null);
+  const galleryImages = project.details.flatMap(detail => detail.points.map((point, pointIndex) => ({
+    src: pointIndex === 0 ? detail.upperMinorImage : detail.bottomMinorImage,
+    title: point.title,
+    section: detail.title,
+    alt: `${project.name}: ${detail.title}, screenshot ${pointIndex + 1}`,
+  })));
+
+  return (
+    <article className="project-page">
+      <header className="project-intro">
+        <div className="project-intro-art" aria-hidden="true">
+          <Image src={asset(project.image)} alt="" fill priority sizes="(max-width: 1200px) 100vw, 1200px" />
+        </div>
+        <div className="project-intro-copy">
+          <p className="project-genre">{project.genre}</p>
+          <h1 id="project-modal-title">{project.name}</h1>
+          <p className="project-deck">{project.description}</p>
+          <dl className="project-facts">
+            <div><dt>My contribution</dt><dd>{project.contribution}</dd></div>
+            <div><dt>Toolkit</dt><dd>{project.tags.join(" · ")}</dd></div>
+          </dl>
+        </div>
+      </header>
+
+      <div className="project-story">
+        {project.details.map((detail, index) => (
+          <section key={detail.title} className="story-section" aria-labelledby={`story-title-${index}`}>
+            <div className="story-heading">
+              <h2 id={`story-title-${index}`}>{detail.title}</h2>
+              <p>{detail.summary}</p>
+            </div>
+
+            <figure className="story-demo">
+              <video controls preload="none" playsInline poster={asset(detail.mainImage)} aria-label={`${project.name}: ${detail.title} gameplay demo`}>
+                <source src={asset(detail.videoSrc)} type="video/mp4" />
+                Your browser does not support this video. <a href={asset(detail.videoSrc)}>Download the gameplay demo.</a>
+              </video>
+            </figure>
+
+            <div className="story-details">
+              {detail.points.map((point, pointIndex) => {
+                const src = pointIndex === 0 ? detail.upperMinorImage : detail.bottomMinorImage;
+                return (
+                  <figure className="story-detail" key={point.title}>
+                    <button type="button" className="story-image-button" aria-haspopup="dialog" aria-label={`Open ${detail.title} screenshot ${pointIndex + 1} in gallery`} onClick={() => setGalleryIndex(project.details.slice(0, index).reduce((count, item) => count + item.points.length, 0) + pointIndex)}>
+                      <Image src={asset(src)} alt={`${project.name}: ${detail.title}, screenshot ${pointIndex + 1}`} width={720} height={405} sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1040px) 46vw, 468px" />
+                    </button>
+                    <figcaption><h3>{point.title}</h3><p>{point.text}</p></figcaption>
+                  </figure>
+                );
+              })}
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <div className="project-ending">
+        <ProjectLink slug={next.slug} className="project-next">
+          <div className="project-next-art" aria-hidden="true"><Image src={asset(next.image)} alt="" fill sizes="(max-width: 1040px) 100vw, 1000px" /></div>
+          <span className="project-next-label">Next project</span>
+          <h2>{next.name}<ArrowUpRight size={30} aria-hidden="true" /></h2>
+          <p>{next.genre}</p>
+        </ProjectLink>
+      </div>
+      <ProjectGallery projectName={project.name} images={galleryImages} index={galleryIndex} onIndexChange={setGalleryIndex} onClose={() => setGalleryIndex(null)} />
+    </article>
+  );
+}

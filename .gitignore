@@ -135,3 +135,4 @@ dist
 
 # Vercel
 .vercel
+.local/
