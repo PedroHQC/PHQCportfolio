@@ -2,14 +2,26 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight, Camera, Route, Wrench } from "lucide-react";
+import { ArrowUpRight, Camera, CodeXml, Gamepad2, Mic, Route, Smartphone, Spline, Trophy, Workflow, Wrench } from "lucide-react";
 import { FaUnity } from "react-icons/fa6";
 import { projects, type Project } from "../data/projects";
 import { asset } from "../lib/site";
 import { ProjectLink } from "./project-navigation";
 import { ProjectGallery } from "./project-gallery";
 
-const toolIcons = { Unity: FaUnity, NavMesh: Route, "Camera systems": Camera };
+const toolIcons = {
+  Unity: FaUnity,
+  "C#": CodeXml,
+  "State machines": Workflow,
+  "GameJam+": Trophy,
+  Tweening: Spline,
+  Cinemachine: Camera,
+  Gameplay: Gamepad2,
+  NavMesh: Route,
+  "Camera systems": Camera,
+  Mobile: Smartphone,
+  "Voice input": Mic,
+};
 
 export function ProjectContent({ project }: { project: Project }) {
   const next = projects[(projects.indexOf(project) + 1) % projects.length];
@@ -34,24 +46,13 @@ export function ProjectContent({ project }: { project: Project }) {
           <Image src={asset(project.image)} alt="" fill priority sizes="(max-width: 1200px) 100vw, 1200px" />
         </div>
         <div className="project-intro-copy">
-          {!compact && <p className="project-genre">{project.genre}</p>}
           <h1 id="project-modal-title">{project.name}</h1>
-          {compact ? (
-            <ul className="project-tools" aria-label="Tools">
-              {project.tags.map(tool => {
-                const Icon = toolIcons[tool as keyof typeof toolIcons] ?? Wrench;
-                return <li key={tool}><Icon size={20} aria-hidden="true" /><span>{tool}</span></li>;
-              })}
-            </ul>
-          ) : (
-            <>
-              <p className="project-deck">{project.description}</p>
-              <dl className="project-facts">
-                <div><dt>My contribution</dt><dd>{project.contribution}</dd></div>
-                <div><dt>Toolkit</dt><dd>{project.tags.join(" · ")}</dd></div>
-              </dl>
-            </>
-          )}
+          <ul className="project-tools" aria-label="Tools">
+            {project.tags.map(tool => {
+              const Icon = toolIcons[tool as keyof typeof toolIcons] ?? Wrench;
+              return <li key={tool}><Icon size={20} aria-hidden="true" /><span>{tool}</span></li>;
+            })}
+          </ul>
         </div>
       </header>
 
