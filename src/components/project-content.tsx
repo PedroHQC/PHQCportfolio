@@ -50,7 +50,7 @@ export function ProjectContent({ project }: { project: Project }) {
               </video>
             </figure>
 
-            <div className="story-details">
+            {detail.points.length > 0 && <div className="story-details">
               {detail.points.map((point, pointIndex) => {
                 const src = pointIndex === 0 ? detail.upperMinorImage : detail.bottomMinorImage;
                 return (
@@ -62,7 +62,7 @@ export function ProjectContent({ project }: { project: Project }) {
                   </figure>
                 );
               })}
-            </div>
+            </div>}
           </section>
         ))}
       </div>

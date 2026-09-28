@@ -179,6 +179,24 @@ export const titeDialogData: ProjectDetail[] = [
         "text": "The camera supports click-to-move navigation, keyboard controls, smooth zooming, and full 360-degree rotation."
       }
     ]
+  },
+  {
+    "mainImage": "/media/TiETe/GameplayPoster.webp",
+    "upperMinorImage": "/assets/TiETe/TiETeCamiaurao.png",
+    "bottomMinorImage": "/assets/TiETe/TiETeCatfish.png",
+    "videoSrc": "/videos/TieTeGameplay_comp.mp4",
+    "title": "Gameplay",
+    "summary": "A closer look at Ti & Tê in action.",
+    "points": []
+  },
+  {
+    "mainImage": "/media/TiETe/BubbleShaderPoster.webp",
+    "upperMinorImage": "/assets/TiETe/TiETeCamiaurao.png",
+    "bottomMinorImage": "/assets/TiETe/TiETeCatfish.png",
+    "videoSrc": "/videos/TieTeBubleShaderShowcase_comp.mp4",
+    "title": "Bubble shader",
+    "summary": "A showcase of the game's bubble shader effect.",
+    "points": []
   }
 ];
 
