@@ -20,7 +20,7 @@ export default function Home() {
           <a href={github} target="_blank" rel="noreferrer" className="text-link">Find me on GitHub <ArrowUpRight size={18} /><span className="sr-only"> (opens in a new tab)</span></a>
         </div>
         <div className="about-copy">
-          <p>Graduated in Computer Science &amp; Generalist Game Developer with 5+ years of experience creating gameplay mechanics and optimized pipelines across Unity, Unreal Engine, and Godot.</p>
+          <p>Graduated in Computer Science, I&apos;m Pedro, a Generalist Game Developer with 5+ years of experience creating gameplay mechanics and optimized pipelines across Unity, Unreal Engine, and Godot.</p>
           <p>Proficient in C#, C++, GDScript, and Python, with a strong focus on clean architecture, GPU profiling, shader development, and multi-platform development.</p>
           <div className="about-signature">Pedro Coelho<span>GAME DEVELOPER</span></div>
         </div>
