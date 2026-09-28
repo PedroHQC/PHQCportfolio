@@ -2,11 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Camera, Route, Wrench } from "lucide-react";
+import { FaUnity } from "react-icons/fa6";
 import { projects, type Project } from "../data/projects";
 import { asset } from "../lib/site";
 import { ProjectLink } from "./project-navigation";
 import { ProjectGallery } from "./project-gallery";
+
+const toolIcons = { Unity: FaUnity, NavMesh: Route, "Camera systems": Camera };
 
 export function ProjectContent({ project }: { project: Project }) {
   const next = projects[(projects.indexOf(project) + 1) % projects.length];
@@ -31,13 +34,24 @@ export function ProjectContent({ project }: { project: Project }) {
           <Image src={asset(project.image)} alt="" fill priority sizes="(max-width: 1200px) 100vw, 1200px" />
         </div>
         <div className="project-intro-copy">
-          <p className="project-genre">{project.genre}</p>
+          {!compact && <p className="project-genre">{project.genre}</p>}
           <h1 id="project-modal-title">{project.name}</h1>
-          <p className="project-deck">{project.description}</p>
-          <dl className="project-facts">
-            <div><dt>My contribution</dt><dd>{project.contribution}</dd></div>
-            <div><dt>Toolkit</dt><dd>{project.tags.join(" · ")}</dd></div>
-          </dl>
+          {compact ? (
+            <ul className="project-tools" aria-label="Tools">
+              {project.tags.map(tool => {
+                const Icon = toolIcons[tool as keyof typeof toolIcons] ?? Wrench;
+                return <li key={tool}><Icon size={20} aria-hidden="true" /><span>{tool}</span></li>;
+              })}
+            </ul>
+          ) : (
+            <>
+              <p className="project-deck">{project.description}</p>
+              <dl className="project-facts">
+                <div><dt>My contribution</dt><dd>{project.contribution}</dd></div>
+                <div><dt>Toolkit</dt><dd>{project.tags.join(" · ")}</dd></div>
+              </dl>
+            </>
+          )}
         </div>
       </header>
 

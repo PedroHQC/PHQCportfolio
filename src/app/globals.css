@@ -411,11 +411,12 @@ html::-webkit-scrollbar-thumb:hover, .project-modal-scroll::-webkit-scrollbar-th
 }
 
 /* Video-only stories use a shorter intro and a two-column showcase. */
-.project-page-compact .project-intro { min-height: 320px; }
-.project-page-compact .project-intro-copy { padding: 36px 28px; }
-.project-page-compact .project-intro h1 { font-size: clamp(36px, 4vw, 52px); margin: 8px 0 12px; }
-.project-page-compact .project-deck { font-size: 19px; }
-.project-page-compact .project-facts { margin-top: 24px; gap: 16px 32px; }
+.project-page-compact .project-intro { min-height: 180px; }
+.project-page-compact .project-intro-copy { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; padding: 32px 40px; text-align: left; }
+.project-page-compact .project-intro h1 { flex-shrink: 0; font-size: clamp(36px, 4vw, 48px); margin: 0; }
+.project-tools { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.project-tools li { display: inline-flex; align-items: center; gap: 8px; padding: 9px 13px; border: 1px solid #ffffff24; border-radius: 999px; background: #111b; color: #e7e7e7; font-size: 14px; line-height: 1.4; }
+.project-tools svg { flex-shrink: 0; color: #f2f2f2; }
 .project-page-compact .project-story { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 28px; padding-top: 36px; }
 .project-page-compact .story-section { min-width: 0; padding-top: 0; }
 .project-page-compact .story-heading { text-align: left; max-width: none; margin: 0 0 18px; }
@@ -434,10 +435,8 @@ html::-webkit-scrollbar-thumb:hover, .project-modal-scroll::-webkit-scrollbar-th
 .project-page-compact .project-next p { margin-top: 6px; }
 @media (max-width: 760px) {
   .project-page-compact .project-intro { min-height: 0; }
-  .project-page-compact .project-intro-copy { padding: 28px 20px; }
-  .project-page-compact .project-deck { font-size: 17px; }
-  .project-page-compact .project-facts { grid-template-columns: 1.2fr 1fr; gap: 16px; margin-top: 20px; }
-  .project-page-compact .project-facts dt, .project-page-compact .project-facts dd { font-size: 14px; }
+  .project-page-compact .project-intro-copy { flex-direction: column; align-items: flex-start; gap: 18px; padding: 28px 20px; }
+  .project-tools { justify-content: flex-start; gap: 8px; }
   .project-page-compact .project-story { grid-template-columns: 1fr; gap: 32px; padding-top: 28px; }
   .project-page-compact .story-section:first-child { grid-template-columns: 1fr; gap: 20px; }
   .project-page-compact .story-section:first-child .story-demo { grid-column: auto; grid-row: auto; }
