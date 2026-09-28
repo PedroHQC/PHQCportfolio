@@ -11,6 +11,7 @@ import { ProjectGallery } from "./project-gallery";
 export function ProjectContent({ project }: { project: Project }) {
   const next = projects[(projects.indexOf(project) + 1) % projects.length];
   const [galleryIndex, setGalleryIndex] = useState<number | null>(null);
+  const compact = project.details.every(detail => !detail.upperMinorImage && !detail.bottomMinorImage);
   const galleryImages = project.details.flatMap((detail, detailIndex) => detail.points.flatMap((point, pointIndex) => {
     const src = pointIndex === 0 ? detail.upperMinorImage : detail.bottomMinorImage;
     return src ? [{
@@ -24,7 +25,7 @@ export function ProjectContent({ project }: { project: Project }) {
   }));
 
   return (
-    <article className="project-page">
+    <article className={`project-page${compact ? " project-page-compact" : ""}`}>
       <header className="project-intro">
         <div className="project-intro-art" aria-hidden="true">
           <Image src={asset(project.image)} alt="" fill priority sizes="(max-width: 1200px) 100vw, 1200px" />
