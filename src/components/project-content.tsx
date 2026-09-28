@@ -11,15 +11,21 @@ import { ProjectGallery } from "./project-gallery";
 export function ProjectContent({ project }: { project: Project }) {
   const next = projects[(projects.indexOf(project) + 1) % projects.length];
   const [galleryIndex, setGalleryIndex] = useState<number | null>(null);
-  const galleryImages = project.details.flatMap(detail => detail.points.map((point, pointIndex) => ({
-    src: pointIndex === 0 ? detail.upperMinorImage : detail.bottomMinorImage,
-    title: point.title,
-    section: detail.title,
-    alt: `${project.name}: ${detail.title}, screenshot ${pointIndex + 1}`,
-  })));
+  const compact = project.details.every(detail => !detail.upperMinorImage && !detail.bottomMinorImage);
+  const galleryImages = project.details.flatMap((detail, detailIndex) => detail.points.flatMap((point, pointIndex) => {
+    const src = pointIndex === 0 ? detail.upperMinorImage : detail.bottomMinorImage;
+    return src ? [{
+      src,
+      detailIndex,
+      pointIndex,
+      title: point.title,
+      section: detail.title,
+      alt: `${project.name}: ${detail.title}, screenshot ${pointIndex + 1}`,
+    }] : [];
+  }));
 
   return (
-    <article className="project-page">
+    <article className={`project-page${compact ? " project-page-compact" : ""}`}>
       <header className="project-intro">
         <div className="project-intro-art" aria-hidden="true">
           <Image src={asset(project.image)} alt="" fill priority sizes="(max-width: 1200px) 100vw, 1200px" />
@@ -50,19 +56,19 @@ export function ProjectContent({ project }: { project: Project }) {
               </video>
             </figure>
 
-            <div className="story-details">
+            {detail.points.length > 0 && <div className="story-details">
               {detail.points.map((point, pointIndex) => {
                 const src = pointIndex === 0 ? detail.upperMinorImage : detail.bottomMinorImage;
                 return (
                   <figure className="story-detail" key={point.title}>
-                    <button type="button" className="story-image-button" aria-haspopup="dialog" aria-label={`Open ${detail.title} screenshot ${pointIndex + 1} in gallery`} onClick={() => setGalleryIndex(project.details.slice(0, index).reduce((count, item) => count + item.points.length, 0) + pointIndex)}>
+                    {src && <button type="button" className="story-image-button" aria-haspopup="dialog" aria-label={`Open ${detail.title} screenshot ${pointIndex + 1} in gallery`} onClick={() => setGalleryIndex(galleryImages.findIndex(image => image.detailIndex === index && image.pointIndex === pointIndex))}>
                       <Image src={asset(src)} alt={`${project.name}: ${detail.title}, screenshot ${pointIndex + 1}`} width={720} height={405} sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1040px) 46vw, 468px" />
-                    </button>
+                    </button>}
                     <figcaption><h3>{point.title}</h3><p>{point.text}</p></figcaption>
                   </figure>
                 );
               })}
-            </div>
+            </div>}
           </section>
         ))}
       </div>

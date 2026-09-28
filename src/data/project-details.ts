@@ -1,7 +1,7 @@
 export interface ProjectDetail {
   mainImage: string;
-  upperMinorImage: string;
-  bottomMinorImage: string;
+  upperMinorImage?: string;
+  bottomMinorImage?: string;
   videoSrc: string;
   title: string;
   summary: string;
@@ -164,8 +164,6 @@ export const wonderWallaceDialogData: ProjectDetail[] = [
 export const titeDialogData: ProjectDetail[] = [
   {
     "mainImage": "/assets/TiETe/TiETeMain.png",
-    "upperMinorImage": "/assets/TiETe/TiETeCamiaurao.png",
-    "bottomMinorImage": "/assets/TiETe/TiETeCatfish.png",
     "videoSrc": "/videos/TiETeVideo.mp4",
     "title": "Overview",
     "summary": "A fast-paced strategy game about gathering resources, growing an army of cat-like fish, and destroying the enemy base.",
@@ -179,6 +177,20 @@ export const titeDialogData: ProjectDetail[] = [
         "text": "The camera supports click-to-move navigation, keyboard controls, smooth zooming, and full 360-degree rotation."
       }
     ]
+  },
+  {
+    "mainImage": "/media/TiETe/GameplayPoster.webp",
+    "videoSrc": "/videos/TieTeGameplay_comp.mp4",
+    "title": "Gameplay",
+    "summary": "A closer look at Ti & Tê in action.",
+    "points": []
+  },
+  {
+    "mainImage": "/media/TiETe/BubbleShaderPoster.webp",
+    "videoSrc": "/videos/TieTeBubleShaderShowcase_comp.mp4",
+    "title": "Bubble shader",
+    "summary": "A showcase of the game's bubble shader effect.",
+    "points": []
   }
 ];
 
