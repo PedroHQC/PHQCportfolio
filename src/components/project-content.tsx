@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight, Camera, CodeXml, Gamepad2, Mic, Route, Smartphone, Spline, Trophy, Workflow, Wrench } from "lucide-react";
+import { ArrowUpRight, Camera, CodeXml, Coffee, Gamepad2, Mic, Route, Smartphone, Spline, Trophy, Workflow, Wrench } from "lucide-react";
 import { FaUnity } from "react-icons/fa6";
 import { projects, type Project } from "../data/projects";
 import { asset } from "../lib/site";
@@ -21,6 +21,7 @@ const toolIcons = {
   "Camera systems": Camera,
   Mobile: Smartphone,
   "Voice input": Mic,
+  "Cozy": Coffee,
 };
 
 export function ProjectContent({ project }: { project: Project }) {

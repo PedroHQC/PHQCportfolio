@@ -1,4 +1,4 @@
-import { afonseDialogData, botVinnikDialogData, wonderWallaceDialogData, titeDialogData, duckHuntCrossyRoadDialogData, boitataDialogData } from "./project-details";
+import { afonseDialogData, botVinnikDialogData, wonderWallaceDialogData, titeDialogData, duckHuntCrossyRoadDialogData, boitataDialogData, tsDialogData } from "./project-details";
 
 export const projects = [
   { slug: "afonse", name: "Afonse", category: "2D", genre: "Adventure · Platformer", image: "/assets/AfonseCardImage.png", tags: ["Unity", "C#", "State machines"], description: "A world reclaimed by nature. A character built to explore it.", contribution: "Character controllers, enemy AI & boss behavior", details: afonseDialogData },
@@ -7,5 +7,6 @@ export const projects = [
   { slug: "wonder-wallace", name: "Wonder Wallace", category: "3D", genre: "Arcade · Fishing", image: "/assets/WonderWallaceKitchen.png", tags: ["Unity", "Cinemachine", "Gameplay"], description: "One hungry bear. Three fish. A race against the clock.", contribution: "Fishing mechanics & cinematic camera transitions", details: wonderWallaceDialogData },
   { slug: "ti-and-te", name: "Ti & Tê", category: "3D", genre: "Real-time strategy", image: "/media/TiETe/Capa.webp", tags: ["Unity", "NavMesh", "Camera systems"], description: "Tiny troops, tactical choices, and a base worth defending.", contribution: "Unit navigation, resources & camera systems", details: titeDialogData },
   { slug: "duck-hunt-crossy-road", name: "Duck Hunt Crossy Road", category: "2D", genre: "Mobile · Arcade", image: "/assets/duckHuntCrossyRoad/DuckHuntCrossyRoadCard.png", tags: ["Unity", "Mobile", "Voice input"], description: "A familiar dog. A forest of angry ducks. Keep moving.", contribution: "Obstacle navigation & voice-controlled hunting", details: duckHuntCrossyRoadDialogData },
+  { slug: "wave-function-collapse", name: "Wave Function Collapse", category: "3D", genre: "Cozy · Arcade", image: "/assets/townscrapper/TSMainImage.png", tags: ["Unity", "Cozy", "Map Building"], description: "Build your own island and explore it.", contribution: "Island constructin & player navigation", details: tsDialogData },
 ];
 export type Project = (typeof projects)[number];

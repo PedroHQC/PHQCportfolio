@@ -235,3 +235,25 @@ export const boitataDialogData: ProjectDetail[] = [
     ]
   }
 ];
+
+export const tsDialogData: ProjectDetail[] = [
+  {
+    "mainImage": "/assets/townscrapper/TSMainImage.png",
+    "upperMinorImage": "/assets/townscrapper/Preview1.png",
+    "bottomMinorImage": "/assets/townscrapper/Preview2.png",
+    "videoSrc": "/videos/TSVideoShowCase.mp4",
+    "title": "Overview",
+    "summary": "A cozy Wave Function Collapse case study, featuring player movement and ambient butterflies.",
+    "points": [
+      {
+        "title": "Island Builder",
+        "text": "As players build across the water, the Wave Function Collapse algorithm dynamically bridges heights with stairs and anchors overhangs with stilts."
+      },
+      {
+        "title": "Player Movement and Ambiance",
+        "text": "Once the island is resolved, the structure serves as an interactive playground for smooth navigation and fluttering wildlife."
+      }
+    ]
+  }
+];
+
