@@ -201,15 +201,15 @@ export const duckHuntCrossyRoadDialogData: ProjectDetail[] = [
     "bottomMinorImage": "/assets/duckHuntCrossyRoad/DuckHuntCrossyRoadThirdImage.png",
     "videoSrc": "/videos/DuckHuntCrossyRoadVideoShowcase.mp4",
     "title": "Overview",
-    "summary": "A mobile arcade game starring a hunting dog trying to cross a forest full of vengeful ducks.",
+    "summary": "A retro-inspired mobile arcade game where the tables have turned: take control of the classic Duck Hunt hound as he navigates a treacherous forest swarming with ducks out for revenge.",
     "points": [
       {
         "title": "The core loop",
-        "text": "Players navigate the forest, avoid obstacles, and collect items while looking for a safe route forward."
+        "text": "Players navigate the forest, avoid obstacles, and collect items while looking for a safe route forward. Each run features procedurally generated terrain powered by a pathfinding algorithm that always guarantees at least one viable path."
       },
       {
         "title": "Voice-controlled hunting",
-        "text": "Voice input lets players trigger hunting actions when ducks fly past, adding another way to interact with the game."
+        "text": "Optimized specifically for mobile devices, the game incorporates low-latency voice input that lets players trigger hunting actions as ducks fly past."
       }
     ]
   }
