@@ -12,7 +12,7 @@ export function ProjectGrid({ full = false }: { full?: boolean }) {
   return <section className={full ? "work-section container work-page" : "work-section container"} id="work">
     <div className="section-heading"><div>{full ? <h1>The work<span className="accent">.</span></h1> : <h2>Built to be played<span className="accent">.</span></h2>}<p>A selection of worlds, mechanics, and the code behind them.</p></div></div>
     <div className="filter-row" role="group" aria-label="Filter projects">
-      {["All projects", "3D games", "2D games"].map(label => <button key={label} onClick={() => setFilter(label)} aria-pressed={filter === label} className={filter === label ? "filter-button selected" : "filter-button"}>{label}{label === "All projects" && <span>06</span>}</button>)}
+      {["All projects", "3D games", "2D games"].map(label => <button key={label} onClick={() => setFilter(label)} aria-pressed={filter === label} className={filter === label ? "filter-button selected" : "filter-button"}>{label}{label === "All projects" && <span>{projects.length.toLocaleString('pt-BR', { minimumIntegerDigits: 2 })}</span>}</button>)}
       <span className="sr-only" aria-live="polite">{visible.length} projects</span>
     </div>
     <div className="project-grid">
