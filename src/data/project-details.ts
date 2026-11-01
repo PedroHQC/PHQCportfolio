@@ -142,7 +142,7 @@ export const botVinnikDialogData: ProjectDetail[] = [
 
 export const wonderWallaceDialogData: ProjectDetail[] = [
   {
-    "mainImage": "/assets/WonderWallaceOverview.png",
+    "mainImage": "/assets/WonderWalaceCardMainImage.png",
     "upperMinorImage": "/assets/WonderWallaceFood.png",
     "bottomMinorImage": "/assets/WonderWallaceFishing.png",
     "videoSrc": "/videos/WonderWallaceShowCase.MP4",
