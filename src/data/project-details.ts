@@ -164,7 +164,7 @@ export const wonderWallaceDialogData: ProjectDetail[] = [
 export const titeDialogData: ProjectDetail[] = [
   {
     "mainImage": "/images/ti-and-te/TiETeMain.webp",
-    "videoSrc": "/videos/ti-and-te/TiETeVideo.mp4",
+    "videoSrc": "/videos/ti-and-te/TieTeGameplay_comp.mp4",
     "title": "Overview",
     "summary": "A fast-paced strategy game about gathering resources, growing an army of cat-like fish, and destroying the enemy base.",
     "points": [

@@ -1,0 +1,51 @@
+---
+title: Devlog template
+description: Copy this file to start a new post. It shows everything a post can use.
+date: 2026-11-01
+tags: [Unity, C#]
+cover: /images/afonse/AfonseLab.webp
+draft: true
+---
+
+Posts with `draft: true` appear only in `npm run dev` and are never published. Remove that line to publish.
+
+## Headings and text
+
+Use `##` for sections and `###` for subsections, since the page already has the title as its main heading. Text supports **bold**, *italics*, and `inline code`.
+
+### Lists and quotes
+
+- One idea per item
+- Keep items short
+
+1. Steps can be numbered
+2. Like this
+
+> Quotes work for highlighting a lesson learned.
+
+## Code
+
+```csharp
+public class GlideState : PlayerState
+{
+    public override void Enter() => player.SetGravity(glideGravity);
+}
+```
+
+## Links
+
+Internal links use the site path: [see the Afonse project](/projects/afonse/). External links open in a new tab: [GitHub](https://github.com/PedroHQC).
+
+## Images
+
+Add compressed WebP files to `public/images/blog/<post-slug>/`, then reference them from `/images/...`.
+
+![Afonse exploring the lab](/images/afonse/AfonseLab.webp)
+
+## Videos
+
+Files in the repository stay in its history forever, so prefer YouTube for long or heavy videos with `<YouTube id="VIDEO_ID" title="Short description" />`. For small clips, compress them first and add them to `public/videos/blog/<post-slug>/`:
+
+<Video src="/videos/afonse/AfonseGlideShowCase.mp4" poster="/images/afonse/AfonseWalkingDebug.webp" label="Afonse gliding across a gap" />
+
+Component props must be plain text in quotes: expressions in `{}` are disabled.

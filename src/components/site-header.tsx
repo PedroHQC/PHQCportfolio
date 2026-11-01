@@ -16,6 +16,7 @@ export function SiteHeader() {
         <Link href="/#work" className={pathname.startsWith("/projects") ? "nav-active" : ""} onClick={() => setOpen(false)}>Work</Link>
         <Link href="/#about" onClick={() => setOpen(false)}>About</Link>
         <Link href="/#expertise" onClick={() => setOpen(false)}>Expertise</Link>
+        <Link href="/blog" className={pathname.startsWith("/blog") ? "nav-active" : ""} onClick={() => setOpen(false)}>Blog</Link>
         <a className="nav-contact" href={linkedin} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>Let’s talk <ArrowUpRight size={16} /><span className="sr-only"> (opens in a new tab)</span></a>
       </nav>
     </div>
