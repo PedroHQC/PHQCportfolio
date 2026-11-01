@@ -10,10 +10,10 @@ export interface ProjectDetail {
 
 export const afonseDialogData: ProjectDetail[] = [
   {
-    "mainImage": "/assets/AfonseLab.png",
-    "upperMinorImage": "/assets/AfonseScreenJump.png",
-    "bottomMinorImage": "/assets/Afonse.png",
-    "videoSrc": "/videos/AfonseShowCase.MP4",
+    "mainImage": "/images/afonse/AfonseLab.webp",
+    "upperMinorImage": "/images/afonse/AfonseScreenJump.webp",
+    "bottomMinorImage": "/images/afonse/Afonse.webp",
+    "videoSrc": "/videos/afonse/AfonseShowCase.mp4",
     "title": "Overview",
     "summary": "A post-apocalyptic adventure built around responsive movement, reactive enemies, and a challenging first boss.",
     "points": [
@@ -28,10 +28,10 @@ export const afonseDialogData: ProjectDetail[] = [
     ]
   },
   {
-    "mainImage": "/assets/AfonseWalkingDebug.png",
-    "upperMinorImage": "/assets/AfonseJumpDebug.png",
-    "bottomMinorImage": "/assets/AfonseCrouchDebug.png",
-    "videoSrc": "/videos/AfonseGlideShowCase.MP4",
+    "mainImage": "/images/afonse/AfonseWalkingDebug.webp",
+    "upperMinorImage": "/images/afonse/AfonseJumpDebug.webp",
+    "bottomMinorImage": "/images/afonse/AfonseCrouchDebug.webp",
+    "videoSrc": "/videos/afonse/AfonseGlideShowCase.mp4",
     "title": "Character controller",
     "summary": "A shared state machine lets the player move between walking, jumping, crouching, and gliding.",
     "points": [
@@ -46,10 +46,10 @@ export const afonseDialogData: ProjectDetail[] = [
     ]
   },
   {
-    "mainImage": "/assets/AfonseBossAtack.png",
-    "upperMinorImage": "/assets/AfonseAndBoss.png",
-    "bottomMinorImage": "/assets/AfonseBoss.png",
-    "videoSrc": "/videos/AfonseBossShowcase.MP4",
+    "mainImage": "/images/afonse/AfonseBossAtack.webp",
+    "upperMinorImage": "/images/afonse/AfonseAndBoss.webp",
+    "bottomMinorImage": "/images/afonse/AfonseBoss.webp",
+    "videoSrc": "/videos/afonse/AfonseBossShowcase.mp4",
     "title": "Boss behavior",
     "summary": "The boss uses its own state machine to choose actions and react to the player.",
     "points": [
@@ -64,10 +64,10 @@ export const afonseDialogData: ProjectDetail[] = [
     ]
   },
   {
-    "mainImage": "/assets/SpiderEnemyChekingSurroundings.png",
-    "upperMinorImage": "/assets/AfonseAranha.png",
-    "bottomMinorImage": "/assets/SpideEnemy.png",
-    "videoSrc": "/videos/SpiderEnemyShowcase.MP4",
+    "mainImage": "/images/afonse/SpiderEnemyChekingSurroundings.webp",
+    "upperMinorImage": "/images/afonse/AfonseAranha.webp",
+    "bottomMinorImage": "/images/afonse/SpideEnemy.webp",
+    "videoSrc": "/videos/afonse/SpiderEnemyShowcase.mp4",
     "title": "Enemy navigation",
     "summary": "Spider enemies use raycasts to find their next move, creating unpredictable pressure around the player.",
     "points": [
@@ -85,10 +85,10 @@ export const afonseDialogData: ProjectDetail[] = [
 
 export const botVinnikDialogData: ProjectDetail[] = [
   {
-    "mainImage": "/assets/BotVinnikOverview.png",
-    "upperMinorImage": "/assets/BotVinnikTeaching.png",
-    "bottomMinorImage": "/assets/BotVinnikBoard.png",
-    "videoSrc": "/videos/BotVinnikShowCase.MP4",
+    "mainImage": "/images/bot-vinnik/BotVinnikOverview.webp",
+    "upperMinorImage": "/images/bot-vinnik/BotVinnikTeaching.webp",
+    "bottomMinorImage": "/images/bot-vinnik/BotVinnikBoard.webp",
+    "videoSrc": "/videos/bot-vinnik/BotVinnikShowCase.mp4",
     "title": "Overview",
     "summary": "An educational chess game developed with DeepGreen Studios, combining guided lessons with a memorable AI instructor.",
     "points": [
@@ -103,10 +103,10 @@ export const botVinnikDialogData: ProjectDetail[] = [
     ]
   },
   {
-    "mainImage": "/assets/BotVinnikLaikaTip.png",
-    "upperMinorImage": "/assets/BotVinnikChessTrail.png",
-    "bottomMinorImage": "/assets/BotVinnikChessHighlights.png",
-    "videoSrc": "/videos/BotVinnikLaikaHint.MP4",
+    "mainImage": "/images/bot-vinnik/BotVinnikLaikaTip.webp",
+    "upperMinorImage": "/images/bot-vinnik/BotVinnikChessTrail.webp",
+    "bottomMinorImage": "/images/bot-vinnik/BotVinnikChessHighlights.webp",
+    "videoSrc": "/videos/bot-vinnik/BotVinnikLaikaHint.mp4",
     "title": "Animation & feedback",
     "summary": "Coordinated motion helps players follow each move and understand the result.",
     "points": [
@@ -121,10 +121,10 @@ export const botVinnikDialogData: ProjectDetail[] = [
     ]
   },
   {
-    "mainImage": "/assets/BotVinnikWrongMove.png",
-    "upperMinorImage": "/assets/BotVinnikTeachingText.png",
-    "bottomMinorImage": "/assets/BotVinnikCard.png",
-    "videoSrc": "/videos/BotVinnikReactions.MP4",
+    "mainImage": "/images/bot-vinnik/BotVinnikWrongMove.webp",
+    "upperMinorImage": "/images/bot-vinnik/BotVinnikTeachingText.webp",
+    "bottomMinorImage": "/images/bot-vinnik/BotVinnikCard.webp",
+    "videoSrc": "/videos/bot-vinnik/BotVinnikReactions.mp4",
     "title": "Character interactions",
     "summary": "Bot Vinnik brings personality to the lessons, reacting to the player’s pace and offering contextual hints.",
     "points": [
@@ -142,10 +142,10 @@ export const botVinnikDialogData: ProjectDetail[] = [
 
 export const wonderWallaceDialogData: ProjectDetail[] = [
   {
-    "mainImage": "/assets/WonderWalaceCardMainImage.png",
-    "upperMinorImage": "/assets/WonderWallaceFood.png",
-    "bottomMinorImage": "/assets/WonderWallaceFishing.png",
-    "videoSrc": "/videos/WonderWallaceShowCase.MP4",
+    "mainImage": "/images/wonder-wallace/WonderWalaceCardMainImage.webp",
+    "upperMinorImage": "/images/wonder-wallace/WonderWallaceFood.webp",
+    "bottomMinorImage": "/images/wonder-wallace/WonderWallaceFishing.webp",
+    "videoSrc": "/videos/wonder-wallace/WonderWallaceShowCase.mp4",
     "title": "Overview",
     "summary": "Wallace is a hungry bear with three fish to catch before the timer runs out.",
     "points": [
@@ -163,8 +163,8 @@ export const wonderWallaceDialogData: ProjectDetail[] = [
 
 export const titeDialogData: ProjectDetail[] = [
   {
-    "mainImage": "/assets/TiETe/TiETeMain.png",
-    "videoSrc": "/videos/TiETeVideo.mp4",
+    "mainImage": "/images/ti-and-te/TiETeMain.webp",
+    "videoSrc": "/videos/ti-and-te/TiETeVideo.mp4",
     "title": "Overview",
     "summary": "A fast-paced strategy game about gathering resources, growing an army of cat-like fish, and destroying the enemy base.",
     "points": [
@@ -179,15 +179,15 @@ export const titeDialogData: ProjectDetail[] = [
     ]
   },
   {
-    "mainImage": "/media/TiETe/GameplayPoster.webp",
-    "videoSrc": "/videos/TieTeGameplay_comp.mp4",
+    "mainImage": "/images/ti-and-te/GameplayPoster.webp",
+    "videoSrc": "/videos/ti-and-te/TieTeGameplay_comp.mp4",
     "title": "Gameplay",
     "summary": "A closer look at Ti & Tê in action.",
     "points": []
   },
   {
-    "mainImage": "/media/TiETe/BubbleShaderPoster.webp",
-    "videoSrc": "/videos/TieTeBubleShaderShowcase_comp.mp4",
+    "mainImage": "/images/ti-and-te/BubbleShaderPoster.webp",
+    "videoSrc": "/videos/ti-and-te/TieTeBubleShaderShowcase_comp.mp4",
     "title": "Bubble shader",
     "summary": "A showcase of the game's bubble shader effect.",
     "points": []
@@ -196,10 +196,10 @@ export const titeDialogData: ProjectDetail[] = [
 
 export const duckHuntCrossyRoadDialogData: ProjectDetail[] = [
   {
-    "mainImage": "/assets/duckHuntCrossyRoad/DuckHuntCrossyRoadMainImage.png",
-    "upperMinorImage": "/assets/duckHuntCrossyRoad/DuckHuntCrossyRoadSecondImage.png",
-    "bottomMinorImage": "/assets/duckHuntCrossyRoad/DuckHuntCrossyRoadThirdImage.png",
-    "videoSrc": "/videos/DuckHuntCrossyRoadVideoShowcase.mp4",
+    "mainImage": "/images/duck-hunt-crossy-road/DuckHuntCrossyRoadMainImage.webp",
+    "upperMinorImage": "/images/duck-hunt-crossy-road/DuckHuntCrossyRoadSecondImage.webp",
+    "bottomMinorImage": "/images/duck-hunt-crossy-road/DuckHuntCrossyRoadThirdImage.webp",
+    "videoSrc": "/videos/duck-hunt-crossy-road/DuckHuntCrossyRoadVideoShowcase.mp4",
     "title": "Overview",
     "summary": "A retro-inspired mobile arcade game where the tables have turned: take control of the classic Duck Hunt hound as he navigates a treacherous forest swarming with ducks out for revenge.",
     "points": [
@@ -217,10 +217,10 @@ export const duckHuntCrossyRoadDialogData: ProjectDetail[] = [
 
 export const boitataDialogData: ProjectDetail[] = [
   {
-    "mainImage": "/assets/boitata/BoitataMainfirstimage.png",
-    "upperMinorImage": "/assets/boitata/BoitataSecondImage.png",
-    "bottomMinorImage": "/assets/boitata/BoitataThirdImage.png",
-    "videoSrc": "/videos/BoitataMainVideoShowCase.mp4",
+    "mainImage": "/images/boitata/BoitataMainfirstimage.webp",
+    "upperMinorImage": "/images/boitata/BoitataSecondImage.webp",
+    "bottomMinorImage": "/images/boitata/BoitataThirdImage.webp",
+    "videoSrc": "/videos/boitata/BoitataMainVideoShowCase.mp4",
     "title": "Overview",
     "summary": "A tower defense adventure inspired by Brazilian folklore and the Kingdom series, with Boitatá protecting the forest from woodcutters.",
     "points": [
@@ -238,10 +238,10 @@ export const boitataDialogData: ProjectDetail[] = [
 
 export const tsDialogData: ProjectDetail[] = [
   {
-    "mainImage": "/assets/townscrapper/TSMainImage.png",
-    "upperMinorImage": "/assets/townscrapper/Preview1.png",
-    "bottomMinorImage": "/assets/townscrapper/Preview2.png",
-    "videoSrc": "/videos/TSVideoShowCase.mp4",
+    "mainImage": "/images/wave-function-collapse/TSMainImage.webp",
+    "upperMinorImage": "/images/wave-function-collapse/Preview1.webp",
+    "bottomMinorImage": "/images/wave-function-collapse/Preview2.webp",
+    "videoSrc": "/videos/wave-function-collapse/TSVideoShowCase.mp4",
     "title": "Overview",
     "summary": "A cozy Wave Function Collapse case study, featuring player movement and ambient butterflies.",
     "points": [

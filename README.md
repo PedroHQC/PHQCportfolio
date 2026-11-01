@@ -31,13 +31,13 @@ The GitHub Pages workflow deploys every push to `main` and supplies `NEXT_PUBLIC
 - `src/lib/site.ts`: social links and asset paths.
 - `src/app/globals.css`: colors, typography, layouts, interactions, and responsive breakpoints.
 
-Original images remain in `public/assets/`. The website serves compressed WebP versions from `public/media/`, preserving the original subdirectory and filename. When adding an image, add its WebP equivalent to `public/media/` as well. Videos stay in `public/videos/` and load only when requested.
+Images live in `public/images/<project-slug>/` and videos in `public/videos/<project-slug>/`, referenced by their real path. Add images as compressed WebP; everything in `public/` is deployed, so keep original exports out of it. Videos load only when requested.
 
 The interface includes project filters, shareable project modals, an image gallery, native demo video controls, mobile navigation, visible keyboard focus, a skip link, and reduced-motion support.
 
 ## Home background video
 
-The Afonse background combines three gameplay clips into a 16-second loop with dissolves. Generated assets live in `public/media/hero/`: a silent 1280x720 desktop MP4 (~1.27 MB), a 480x854 portrait MP4 (~530 KB), and a WebP poster (~27 KB). Both videos use H.264 at 24 fps with fast-start metadata. The browser loads only the appropriate video and pauses playback outside the hero, in hidden tabs, and behind project modals. Reduced-motion and data-saving preferences use the poster instead of autoplay. The decorative background has no playback controls.
+The Afonse background combines three gameplay clips into a 16-second loop with dissolves. Generated assets live in `public/videos/hero/` and `public/images/hero/`: a silent 1280x720 desktop MP4 (~1.27 MB), a 480x854 portrait MP4 (~530 KB), and a WebP poster (~27 KB). Both videos use H.264 at 24 fps with fast-start metadata. The browser loads only the appropriate video and pauses playback outside the hero, in hidden tabs, and behind project modals. Reduced-motion and data-saving preferences use the poster instead of autoplay. The decorative background has no playback controls.
 
 To regenerate the assets from the original videos, install FFmpeg and run:
 

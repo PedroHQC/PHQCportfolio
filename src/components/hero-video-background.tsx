@@ -26,7 +26,7 @@ export function HeroVideoBackground() {
         video.pause();
         return;
       }
-      const src = asset(`/media/hero/afonse-${mobile.matches ? "mobile" : "desktop"}.mp4`);
+      const src = asset(`/videos/hero/afonse-${mobile.matches ? "mobile" : "desktop"}.mp4`);
       if (video.getAttribute("src") !== src) video.src = src;
       video.muted = true;
       void video.play().catch(() => {
@@ -55,6 +55,6 @@ export function HeroVideoBackground() {
   }, [projectOpen]);
 
   return <div className="hero-background" aria-hidden="true">
-    <video ref={videoRef} className="hero-video" poster={asset("/media/hero/afonse-poster.webp")} autoPlay muted loop playsInline preload="none" disablePictureInPicture tabIndex={-1} />
+    <video ref={videoRef} className="hero-video" poster={asset("/images/hero/afonse-poster.webp")} autoPlay muted loop playsInline preload="none" disablePictureInPicture tabIndex={-1} />
   </div>;
 }
