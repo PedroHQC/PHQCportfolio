@@ -11,9 +11,9 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"], dis
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: { default: "Pedro Coelho — Game Developer", template: "%s — Pedro Coelho" },
-  description: "Pedro Coelho is a Unity and C# game developer crafting responsive gameplay, intelligent systems, and memorable 2D and 3D experiences.",
-  openGraph: { title: "Pedro Coelho — Game Developer", description: "Thoughtful code. Memorable play. Explore my games and the systems behind them.", type: "website" },
+  title: { default: "Pedro Coelho — Game Developer | Technical Artist", template: "%s — Pedro Coelho" },
+  description: "Pedro Coelho is a Unity game developer and technical artist bridging responsive gameplay systems with custom shaders, real-time rendering, and visual optimization",
+  openGraph: { title: "Pedro Coelho — Game Developer | Technical Artist", description: "Thoughtful code. Memorable play. Explore my games and the systems behind them.", type: "website" },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body id="top" className={`${geistSans.variable} ${geistMono.variable}`}><a href="#main-content" className="skip-link">Skip to content</a><SmoothScroll /><ProjectModalProvider><SiteHeader />{children}<SiteFooter /></ProjectModalProvider></body></html>;

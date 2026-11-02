@@ -6,7 +6,7 @@ export function HomeHero() {
     <section className="hero" aria-labelledby="hero-heading">
       <HeroVideoBackground />
       <div className="hero-content">
-        <p className="hero-identity">Game developer</p>
+        <p className="hero-identity">Game developer | Technical Artist</p>
         <h1 id="hero-heading">PORTFOLIO</h1>
         <div className="hero-byline">
           <p>Pedro Coelho</p>
